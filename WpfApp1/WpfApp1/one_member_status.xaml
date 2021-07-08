@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.one_member_status"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="one_member_status" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="input id :" FontFamily="Showcard Gothic" Grid.Row="0" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBox x:Name="name" Width=" 100" Height="20" Grid.Row="0" Margin="182,23,511.333,17" ></TextBox>
+            <TextBlock Text="name :" FontFamily="Showcard Gothic" Grid.Row="1" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBlock Text="mony :" FontFamily="Showcard Gothic" Grid.Row="2" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBlock Text="monthly payment :" FontFamily="Showcard Gothic" Grid.Row="3" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBlock Text="email :" FontFamily="Showcard Gothic" Grid.Row="4" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBlock Text="phone Number :" FontFamily="Showcard Gothic" Grid.Row="5" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBlock Text="Renew membership date :" FontFamily="Showcard Gothic" Grid.Row="6" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            
+            
+            <TextBlock x:Name="nametxt" FontFamily="Showcard Gothic" Grid.Row="1" VerticalAlignment="Center" Margin="150 0 0 0"></TextBlock>
+            <TextBlock x:Name="monytxt" FontFamily="Showcard Gothic" Grid.Row="2" VerticalAlignment="Center" Margin="150 0 0 0"></TextBlock>
+            <TextBlock x:Name="monthlypaymenttxt" FontFamily="Showcard Gothic" Grid.Row="3" VerticalAlignment="Center" Margin="200 0 0 0"></TextBlock>
+            <TextBlock x:Name="emailtxt" FontFamily="Showcard Gothic" Grid.Row="4" VerticalAlignment="Center" Margin="150 0 0 0"></TextBlock>
+            <TextBlock x:Name="phoneNutxt" FontFamily="Showcard Gothic" Grid.Row="5" VerticalAlignment="Center" Margin="200 0 0 0"></TextBlock>
+            <TextBlock x:Name="Renewmembershipdatetxt" FontFamily="Showcard Gothic" Grid.Row="6" VerticalAlignment="Center" Margin="250 0 0 0"></TextBlock>
+            <Button Content="submit" HorizontalAlignment="Left" Margin="380,23,0,0" VerticalAlignment="Top" Width="75" Click="find_person_btn"/>
+        </Grid>
+    </Grid>
+</Window>

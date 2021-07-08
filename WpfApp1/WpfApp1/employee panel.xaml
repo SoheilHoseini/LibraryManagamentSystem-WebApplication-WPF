@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.employee_panel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="employee_panel" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        >
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="book list" Margin="173.333,76,113.333,198.667" Height="46" Width="110" ></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="members status" Margin="173.333,147,113.333,127.667" Height="46" Width="110" Click="membersStatus_btn"  ></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="personal info" Margin="173.333,217,113.333,58.667" Height="45" Width="110"></Button>
+            <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="log out"  Height="33" Width="85" Click="LogOut"></Button>
+            <TextBlock x:Name="nametxt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="173.667,24,89.667,10" Width="134"  ></TextBlock>
+
+        </Grid>
+
+
+        <Image  Grid.Column="0" Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Width="400" Height="300" Margin="0,50,394.667,72"/>
+        <Image Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Margin="700,15,46.667,366" RenderTransformOrigin="0.243,0.541"/>
+    </Grid>
+</Window>

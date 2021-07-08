@@ -1,0 +1,98 @@
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\employee.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\manager.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\user.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\employee.baml
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\manager.baml
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\user.baml
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\user panel.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\user panel.baml
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\employee panel.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\manager panel.g.cs
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\employee panel.baml
+C:\Users\Amir\Desktop\New folder\WpfApp1\WpfApp1\obj\Debug\manager panel.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\employee panel.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\employee.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\manager panel.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\manager.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\user panel.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\user.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\employee panel.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\employee.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\manager panel.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\manager.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\user panel.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\user.baml
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\payment.g.cs
+C:\Users\Amir\Desktop\my\WpfApp1\WpfApp1\obj\Debug\payment.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\employee panel.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\employee.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\financial_status.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manager panel.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manager.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manage_employees.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manage_members.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\members_status.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\member_sign_up.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\one_member_status.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\payment.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\pay_history.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\personal_info.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\user panel.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\user.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\programing\C#\project\my\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\programing\C#\project\my\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+D:\programing\C#\project\my\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\employee panel.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\employee.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\financial_status.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manager panel.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manager.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manage_employees.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\manage_members.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\members_status.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\member_sign_up.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\one_member_status.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\payment.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\pay_history.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\personal_info.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\user panel.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\user.baml
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache

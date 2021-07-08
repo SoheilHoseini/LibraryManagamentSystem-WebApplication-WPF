@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.user"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="user" Height="500" Width="400">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="140"></RowDefinition>
+                <RowDefinition Height="140"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" >
+                <TextBlock HorizontalAlignment="Left" Text="Username :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
+                <TextBox Margin="20,20,19.333,20" Name="usname"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" >
+                <TextBlock HorizontalAlignment="Left" Text="password  :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
+                <PasswordBox Margin="20,20,19.333,20" Name="pass"></PasswordBox>
+            </StackPanel>
+            <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="sign in" Click="sign_in"></Button>
+            <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="back"  Margin="10,21.667,0,20.667" Click="back"></Button>
+        </Grid>
+
+    </Grid>
+</Window>
+
