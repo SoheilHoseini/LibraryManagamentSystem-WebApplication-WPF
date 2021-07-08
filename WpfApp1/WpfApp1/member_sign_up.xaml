@@ -7,6 +7,40 @@
         mc:Ignorable="d"
         Title="member_sign_up" Height="450" Width="800">
     <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition ></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="name :" FontFamily="Showcard Gothic" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Email :" FontFamily="Showcard Gothic" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Phone Number :" FontFamily="Showcard Gothic" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="password :" FontFamily="Showcard Gothic" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="repeat password :" FontFamily="Showcard Gothic" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="gender :" FontFamily="Showcard Gothic" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+            <CheckBox Content="male" x:Name="male" Grid.Row="5" Grid.Column="1"  VerticalAlignment="Center" Margin="94.333,22.333,-94.667,21.667"></CheckBox>
+            <CheckBox Content="female" x:Name="female" Grid.Row="5" Grid.Column="1"  VerticalAlignment="Center" Margin="242.333,22.333,-241.667,21.667"></CheckBox>
+
+            <TextBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="nametxt" Width="300" Height="20" Margin="50 0 0 0"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="emailtxt" Width="300" Height="20" Margin="50 0 0 0"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="phonetxt" Width="300" Height="20" Margin="50 0 0 0"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="passwordtxt" Width="300" Height="20" Margin="50 0 0 0"></TextBox>
+            <TextBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" x:Name="repasswordtxt" Width="300" Height="20" Margin="50 0 0 0"></TextBox>
+
+            <Button Grid.Row="6" Grid.Column="0" FontFamily="Showcard Gothic" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Content="back" Click="back" Width="100" Height="30"></Button>
+            <Button Grid.Row="6" Grid.Column="1" FontFamily="Showcard Gothic" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Sign Up" Click="Sign_up_btn" Width="100" Height="30"></Button>
+        </Grid>
         
     </Grid>
 </Window>

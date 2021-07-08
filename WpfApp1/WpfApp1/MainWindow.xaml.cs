@@ -84,6 +84,7 @@ namespace WpfApp1
         public DateTime dateofsignup { get; set; }
         public DateTime Renewmembershipdate { get; set; }
         public int BorrowedbookNU { get; set; }
+        public ImageSource avatar { get; set; }
         public member(string name, string pass,int mony, int monthlypayment, string email,string phoneNu, DateTime dateofsignup,DateTime Renewmembershipdate,int BorrowedbookNU)
         {
             this.name = name;
@@ -115,6 +116,7 @@ namespace WpfApp1
         public string email { get; set; }
         public string phoneNu { get; set; }
         public DateTime dateofRecruitment { get; set; }
+        public string avatarImgPass { get; set; }
         public employe(string name, string pass, int mony,  string email, string phoneNu, DateTime dateofRecruitment)
         {
             this.name = name;
