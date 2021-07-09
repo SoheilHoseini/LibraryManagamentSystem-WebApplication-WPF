@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace WpfApp1
 {
@@ -110,9 +111,10 @@ namespace WpfApp1
     }
     public class employe
     {
+        public double payment { get; set; }
         public string name { get; set; }
         public string pass { get; set; }
-        public int mony { get; set; }
+        public double mony { get; set; }
         public string email { get; set; }
         public string phoneNu { get; set; }
         public DateTime dateofRecruitment { get; set; }
@@ -144,6 +146,7 @@ namespace WpfApp1
         public member owner;
         public DateTime borrowedDay;
         public string name;
+        public string writer;
         public int NU;
 
         public int timeremaining()
@@ -156,9 +159,9 @@ namespace WpfApp1
     }
     public class Library
     {
-        public List<Book> books;
-        public List<employe> employees;
-        public List<member> members;
+        public ObservableCollection<Book> books;
+        public ObservableCollection<employe> employees;
+        public ObservableCollection<member> members;
         public managar managar;
     }
 }

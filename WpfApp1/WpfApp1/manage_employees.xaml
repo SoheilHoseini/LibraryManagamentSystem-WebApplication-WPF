@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="manage_employees" Height="450" Width="800">
+        Title="manage_employees" Height="350" Width="600">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="0.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Content="Dismiss" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="95" Height="47" Click="Delete"/>
+            <Button Content="Add" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="95" Height="47" Click="AddEmployee"/>
+            <Button Content="Show All" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="95" Height="47" Click="EmployeeShow"/>
+            <Button Content="Deposit" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="95" Height="47" Click="pay"/>
+            <Button Content="back" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="75" Click="back"/>
+            <PasswordBox x:Name="passtxt" Grid.Row="1" Grid.Column="1" Width="100" Height="30" VerticalAlignment="Bottom" Margin="162.333,0,34.333,63.667" Grid.RowSpan="2"></PasswordBox>
+            <TextBlock Text="enter password" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="44.333,0,0,9.667"></TextBlock>
+        </Grid>
+       
+
     </Grid>
 </Window>

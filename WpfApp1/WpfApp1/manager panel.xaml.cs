@@ -45,5 +45,17 @@ namespace WpfApp1
             fs.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            manage_employees me = new manage_employees();
+            me.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AllBooks Ab = new AllBooks();
+            Ab.Show();
+        }
     }
 }

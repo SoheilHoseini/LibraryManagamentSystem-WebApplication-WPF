@@ -20,9 +20,9 @@
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
 
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="employees" Margin="198.333,55,113.333,232.667" Height="33" Width="85" ></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="employees" Margin="198.333,55,113.333,232.667" Height="33" Width="85" Click="Button_Click" ></Button>
             <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Add book" Margin="198.333,119,113.333,168.667" Height="33" Width="85"  ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="book list" Margin="198.333,183,113.333,104.667" Height="33" Width="85"></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="book list" Margin="198.333,183,113.333,104.667" Height="33" Width="85" Click="Button_Click_1"></Button>
             <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Financial" Margin="198.333,247,113.333,40.667" Height="33" Width="85" Click="financial"></Button>
             <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="log out"  Height="33" Width="85" Click="LogOut"></Button>
             <TextBlock x:Name="nametxt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="173.667,24,89.667,10" Width="134"  ></TextBlock>

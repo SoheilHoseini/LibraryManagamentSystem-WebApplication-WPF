@@ -45,5 +45,11 @@ namespace WpfApp1
             manage.Show();
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AllBooks AB = new AllBooks();
+            AB.Show();
+        }
     }
 }

@@ -40,5 +40,10 @@ namespace WpfApp1
             mw.Show();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            books bs = new books();
+            bs.Show();
+        }
     }
 }

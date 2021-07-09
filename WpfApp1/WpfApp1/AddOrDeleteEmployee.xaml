@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.AddOrDeleteEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="AddOrDeleteEmployee" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Button Content="search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="679,68,0,0" Click="search"/>
+            <TextBlock Text="enter name of employee how you want to dismis :" Margin="36,70,463.333,320.667" Height="30" ></TextBlock>
+            <TextBlock Text="Dissmis" FontFamily="Showcard Gothic" FontSize="20" Margin="35,27,463.333,363.667" Height="30" ></TextBlock>
+            <TextBox x:Name="name" Height="30" Margin="378,65,192.333,325.667"/>
+            <Button Content="Dissmis" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="679,119,0,0" Click="delete"/>
+
+
+            <TextBlock Text="Add Employee" FontFamily="Showcard Gothic" FontSize="20" Margin="36,170,461.333,220.667" Height="30" />
+            <TextBlock Text="name :" FontFamily="Showcard Gothic" FontSize="15" Margin="36,239,459.333,151.667" Height="30" />
+            <TextBlock Text="email :" FontFamily="Showcard Gothic" FontSize="15" Margin="36,274,459.333,116.667" Height="30" />
+            <TextBlock Text="payment amunt :" FontFamily="Showcard Gothic" FontSize="15" Margin="35,309,460.333,81.667" Height="30" />
+            <TextBlock Text="password :" FontFamily="Showcard Gothic" FontSize="15" Margin="36,344,460.333,46.667" Height="30" />
+            <TextBlock Text="repeat password :" FontFamily="Showcard Gothic" FontSize="15" Margin="34,374,461.333,16.667" Height="30" />
+
+            <TextBox x:Name="nametxtAdd" Height="30" Width="200" Margin="294,233,299.333,157.667"></TextBox>
+            <TextBox x:Name="emailtxt" Height="30" Width="200" Margin="294,269,299.333,121.667"/>
+            <TextBox x:Name="paymanttxt" Height="30" Width="200" Margin="294,304,299.333,86.667"/>
+            <TextBox x:Name="passtxt" Height="30" Width="200" Margin="294,339,299.333,51.667"/>
+            <TextBox x:Name="repasstxt" Height="30" Width="200" Margin="294,374,299.333,16.667"/>
+            <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Margin="620,289,0,0" Height="45" Click="AddEmpoyee"/>
+            <TextBlock x:Name="person" Margin="381,113,182.333,277.667" Height="30" />
+            <TextBlock Text="phone Number :" FontFamily="Showcard Gothic" FontSize="15" Margin="36,204,458.333,186.667" Height="30" />
+            <TextBox x:Name="phoneNutxt" Height="30" Width="200" Margin="294,198,299.333,192.667"/>
+
+        </Grid>
+
+    </Grid>
+</Window>
