@@ -269,25 +269,25 @@ namespace WpfApp1
             {
                 books1.Add(b);
             }
-            DataContext = books1.Where(x => x.borrowed == true);//***************
+            DataContext = MyBorrowedBooks;//***************
             this.titletxt.Text = "borrowd books";
         }
 
         private void All_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = books1;
+            DataContext = MyBooks;
             this.titletxt.Text = "All books";
         }
 
         private void borrowd_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = books1.Where(x => x.borrowed == true);//***************
+            DataContext = MyBorrowedBooks;//***************
             this.titletxt.Text = "borrowd books";
         }
 
         private void existing_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = books1.Where(x => x.borrowed == false);//***************
+            DataContext = MyBooks.Where(x => x.borrowed == false);//***************
             this.titletxt.Text = "existing books";
         }
 

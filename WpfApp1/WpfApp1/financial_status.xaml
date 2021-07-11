@@ -17,9 +17,8 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="1" Text="Bank balance :" FontFamily="Showcard Gothic" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
         <TextBlock Grid.Row="1" x:Name="amunt" FontFamily="Showcard Gothic" VerticalAlignment="Center" Margin="250 0 0 0"></TextBlock>
-        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="128,10.333,517.333,23.667" Height="50" FontFamily="Showcard Gothic" Content="Increase bank balance " Click="increas"></Button>
-        <Button Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="347,17.333,297.333,16.667" Height="50" FontFamily="Showcard Gothic" Content="history log " Width="149" Click="history"></Button>
-        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,10.333,0,23.667" Height="50" FontFamily="Showcard Gothic" Content="back" Width="98"></Button>
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="128,10.333,517.333,23.667" Height="50" FontFamily="Showcard Gothic" Content="Increase bank balance " Click="AddToAccount"></Button>
+        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,10.333,0,23.667" Height="50" FontFamily="Showcard Gothic" Content="back" Width="98" Click="Button_Click"></Button>
         <TextBlock Grid.Row="2" Text="input amunt of mony :" FontFamily="Showcard Gothic" VerticalAlignment="Center" Margin="347,28.333,281.333,32.667" Height="23"/>
         <TextBox x:Name="mony_amunt" Grid.Row="2" VerticalAlignment="Center" Margin="512,27.333,152.333,38.667"></TextBox>
     </Grid>

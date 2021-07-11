@@ -259,25 +259,21 @@ namespace WpfApp1
 
 
 
-        Library lib;
-        public ObservableCollection<employe> employees;
+
         public Allemployees()
         {
             InitializeComponent();
 
             GetInfoFromDatabase();
             //initilize lib
-            foreach (employe em in lib.employees)
-            {
-                employees.Add(em);
-            }
-            DataContext = this;
+
         }
 
         private void remove_btn_Click(object sender, RoutedEventArgs e)
         {
-
-            
+            employe employeToRemove = ((Button)sender).Tag as employe;
+            MyEmployees.Remove(employeToRemove);
+            SaveInfoToDatabase();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

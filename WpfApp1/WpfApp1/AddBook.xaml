@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp1.AddBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="AddBook" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <TextBlock Text="Add Book :" Margin="73,28,541.333,362.667" FontSize="20" FontFamily="Showcard Gothic"></TextBlock>
+            <TextBlock Text="name :" Margin="74,106,539.333,284.667" FontSize="15" FontFamily="Showcard Gothic"/>
+            <TextBlock Text="author :" Margin="74,187,539.333,203.667" FontSize="15" FontFamily="Showcard Gothic"/>
+            <TextBlock Text="publish number :" Margin="73,249,539.333,141.667" FontSize="15" FontFamily="Showcard Gothic"/>
+
+            <TextBox x:Name="nametxt" Width="200" Height="30" Margin="285,99,308.333,291.667"></TextBox>
+            <TextBox x:Name="writer" Width="200" Height="30" Margin="285,180,308.333,210.667"/>
+            <TextBox x:Name="Nu" Width="200" Height="30" Margin="285,249,308.333,141.667"/>
+            <Button Content="ADD" Width="40" Height="40" Click="Button_Click" Margin="362,307,391.333,73.667"></Button>
+            <Button Content="back" Width="40" Height="30" Click="back" Margin="81,342,672.333,38.667"/>
+        </Grid>
+        
+    </Grid>
+</Window>

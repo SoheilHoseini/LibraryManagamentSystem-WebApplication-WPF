@@ -33,7 +33,7 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding name}"></TextBlock>
                                 <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding phoneNu}"></TextBlock>
-                                <Button Content="delete" Grid.Row="0" Grid.Column="2" Width="10" Height="10" Click="remove_btn_Click" x:Name="remove_btn"></Button>
+                                <Button Content="delete" Grid.Row="0" Grid.Column="2" Width="10" Height="10" x:Name="remove_btn" MouseLeftButtonUp="remove_btn_Click"></Button>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

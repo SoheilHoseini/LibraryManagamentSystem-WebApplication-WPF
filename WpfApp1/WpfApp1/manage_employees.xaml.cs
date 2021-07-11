@@ -316,7 +316,8 @@ namespace WpfApp1
             {
                 monyTopay += m;
             }
-            if(monyTopay>lib.managar.mony)
+            managar[] mng = MyManager.ToArray();
+            if (monyTopay<mng[0].mony)
             {
                 foreach(employe Em in lib.employees)
                 {

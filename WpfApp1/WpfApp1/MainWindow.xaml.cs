@@ -318,7 +318,7 @@ namespace WpfApp1
     {
         public string name { get; set; }
         public string pass { get; set; }
-        List<Book> Borrowed;
+        public ObservableCollection<Book> Borrowed;
         public float mony { get; set; }
         public float monthlypayment { get; set; }
         public string email { get; set; }
@@ -358,6 +358,7 @@ namespace WpfApp1
 
     public class employe
     {
+        public string username { get; set; }
         public double payment { get; set; }
         public string name { get; set; }
         public string pass { get; set; }
@@ -368,10 +369,11 @@ namespace WpfApp1
         public string avatarImgPass { get; set; }
 
         //constructor
-        public employe(string name, string pass, int mony, string email, string phoneNu, DateTime dateofRecruitment)
+        public employe(string name, string pass, string username, int mony, string email, string phoneNu, DateTime dateofRecruitment)
         {
             this.name = name;
             this.pass = pass;
+            this.username = username;
             this.email = email;
             this.phoneNu = phoneNu;
             this.dateofRecruitment = dateofRecruitment;

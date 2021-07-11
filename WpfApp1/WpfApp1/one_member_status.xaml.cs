@@ -274,14 +274,19 @@ namespace WpfApp1
         {
             
             this.nam = name.Text;
-            this.nametxt.Text = Elib.members.Where(x => x.name == nam).Select(x => x.name).ToString();
-            this.monytxt.Text = Elib.members.Where(x => x.name == nam).Select(x => x.mony).ToString();
-            this.monthlypaymenttxt.Text = Elib.members.Where(x => x.name == nam).Select(x => x.monthlypayment).ToString();
-            this.emailtxt.Text = Elib.members.Where(x => x.name == nam).Select(x => x.email).ToString();
-            this.phoneNutxt.Text = Elib.members.Where(x => x.name == nam).Select(x => x.phoneNu).ToString();
-            this.Renewmembershipdatetxt.Text = Elib.members.Where(x => x.name == nam).Select(x => x.Renewmembershipdate).ToString();
+            this.nametxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.name).ToString();
+            this.monytxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.mony).ToString();
+            this.monthlypaymenttxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.monthlypayment).ToString();
+            this.emailtxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.email).ToString();
+            this.phoneNutxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.phoneNu).ToString();
+            this.Renewmembershipdatetxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.Renewmembershipdate).ToString();
 
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

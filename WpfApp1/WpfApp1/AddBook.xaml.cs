@@ -10,8 +10,8 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Text.RegularExpressions;
 using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -19,11 +19,10 @@ using System.Data.SqlClient;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for AddOrDeleteEmployee.xaml
+    /// Interaction logic for AddBook.xaml
     /// </summary>
-    public partial class AddOrDeleteEmployee : Window
+    public partial class AddBook : Window
     {
-        //init "THE 5 LISTS" of all info stored in the database
         public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
         public static ObservableCollection<employe> MyEmployees = new ObservableCollection<employe>();
         public static ObservableCollection<member> MyMembers = new ObservableCollection<member>();
@@ -257,121 +256,99 @@ namespace WpfApp1
             //close the connection to database
             con.Close();
         }
-
-
-
-
-        int v = 0;
-        Library lib;
-        public AddOrDeleteEmployee()
+        public AddBook()
         {
             InitializeComponent();
-
             GetInfoFromDatabase();
-            //initilize lib
         }
 
-        private void search(object sender, RoutedEventArgs e)
+        private void AddBookMethod(string Name, string Writer, int pubNum)
+        {
+            int previousCount = 0;
+            string command, command2;
+            bool bookFound = false;
+
+            //open the connection to database
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+            con.Open();
+
+            //take info of all books from database
+            command = "select * from Books";
+            SqlDataAdapter adapter = new SqlDataAdapter(command, con);
+
+            //we can't get the info from adapter, so we just pour the info in data to manipulate
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+
+            //check this book already exists in the library or not
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                if (data.Rows[i][0].ToString() == Name)
+                {
+                    try
+                    {
+                        previousCount = int.Parse(data.Rows[i][2].ToString());
+                        bookFound = true;
+                        break;
+                    }
+                    catch
+                    {
+
+                    }
+                }
+            }
+
+            if (!bookFound)
+            {
+                //add new book to database
+                command2 = "insert into Books values('" + Name + "' , '" + Writer + "' , '" + 1 + "' , '" + pubNum + "')";
+            }
+            else
+            {
+                //increase the number of books in the library by 1
+                command2 = "update Books SET count = '" + previousCount + 1 + "' where name = '" + Name + "' ";
+            }
+
+
+            //execution of the commands
+            SqlCommand com = new SqlCommand(command, con);
+            SqlCommand com2 = new SqlCommand(command2, con);
+
+            //execute the commands
+            com.BeginExecuteNonQuery();
+            com2.BeginExecuteNonQuery();
+
+            //close the connection to database
+            con.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(validate())
+            {
+                AddBookMethod(this.nametxt.Text, this.writer.Text, int.Parse(this.Nu.Text));
+            }
+        }
+        public bool validate()
         {
             try
             {
-                employe[] employees = MyEmployees.Where(x => x.name == name.Text).ToArray();
-                person.Text = employees[0].name;
-                this.v = 1;
-            }
-            catch
-            {
-                MessageBox.Show("enter name of one employee !");
-            }
-            
-        }
-        private void delete(object sender, RoutedEventArgs e)
-        {
-            if(this.v==1)
-            {
-                employe[] employees = MyEmployees.Where(x => x.name == person.Text).ToArray();
-                MyEmployees.Remove(employees[0]);
-                v = 0;
-            }
-            else
-            {
-                MessageBox.Show("input employee's name first!");
-            }
-            SaveInfoToDatabase();
-        }
-        public void AddEmpoyee(object sender, RoutedEventArgs e)
-        {
-            if(validateemail()&& PhoneNuvalidate()&& validateDouble())
-            {
-                if(passtxt.Text==repasstxt.Text)
-                {
-                    int v = 0;
-                    foreach(employe emp in MyEmployees)
-                    {
-                        if(emp.name==this.name.Text || emp.email==this.emailtxt.Text||emp.username==this.user_name.Text)
-                        {
-                            v = 1;
-                        }
-                    }
-                    if(v==0)
-                    {
-                        employe em = new employe(this.name.Text, this.passtxt.Text, this.user_name.Text, 0, this.emailtxt.Text, this.phoneNutxt.Text, DateTime.Now);
-                        MyEmployees.Add(em);
-                        SaveInfoToDatabase();
-                    }
-                    else
-                    {
-                        MessageBox.Show("this person already exist in employees! try again");
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("passwords dosn't match!");
-                }
-               
-            }
-        }
-        public bool validateemail()
-        {
-            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-            Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
-            if (reemail.IsMatch(emailtxt.Text))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("invalid email input!");
-                return false;
-            }
-        }
-        public bool PhoneNuvalidate()
-        {
-            Regex rx = new Regex("^(09)\\d{9}$", RegexOptions.IgnoreCase);
-            if(rx.IsMatch(phoneNutxt.Text))
-            {
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("wrong phone Number!");
-                return false;
-            }
-        }
-        public bool validateDouble()
-        {
-            try
-            {
-                double n = double.Parse(paymanttxt.Text);
+                int n = int.Parse(this.Nu.Text);
                 return true;
             }
             catch
             {
-                MessageBox.Show("input a number for paymants!");
+                MessageBox.Show("plese enter an intiger number for publition Number  ");
                 return false;
             }
 
         }
+        private void back(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
+    
 }

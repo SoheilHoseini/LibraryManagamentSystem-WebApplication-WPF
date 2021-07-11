@@ -270,15 +270,25 @@ namespace WpfApp1
 
             GetInfoFromDatabase();
             //initialize Elib
-            foreach (member m in this.Elib.members.Where(x => x.Daysmembershipremaining() < 0))
+            foreach (member m in MyMembers.Where(x => x.Daysmembershipremaining() < 0))
             {
                 delayeTopay.Add(m);
             }
-            foreach(member m in this.Elib.books.Where(x => x.owner != null && x.timeremaining() < 0).Select(x => x.owner))
+            foreach(member m in MyMembers)
             {
-                delayeToReturn.Add(m);
+                ObservableCollection<Book> books2 = m.Borrowed;
+                int v = 0;
+                foreach(Book b in books2.Where(x=>x.timeremaining()<0))
+                {
+                    ++v;
+                }
+                if(v>0)
+                {
+                    delayeToReturn.Add(m);
+                }
+                
             }
-            foreach(member m in Elib.members)
+            foreach(member m in MyMembers)
             {
                 members.Add(m);
             }

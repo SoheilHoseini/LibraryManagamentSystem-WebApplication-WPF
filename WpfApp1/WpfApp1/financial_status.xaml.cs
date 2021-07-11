@@ -260,19 +260,20 @@ namespace WpfApp1
 
 
 
-        Library lib;
+
         public financial_status()
         {
             InitializeComponent();
             GetInfoFromDatabase();
             //initilize lib
-            amunt.Text= lib.managar.mony.ToString();
+            managar[] mng = MyManager.ToArray();
+            amunt.Text= mng[0].mony.ToString();
         }
 
         //increase the bank money
         private void AddToAccount(object sender, RoutedEventArgs e)
         {
-            double n = new double();
+            int n = new int();
             int v = 0;
             try
             {
@@ -287,9 +288,21 @@ namespace WpfApp1
             {
                 payment pay = new payment(n);
                 pay.Show();
-                lib.managar.increasMony();
-                amunt.Text = lib.managar.mony.ToString();
+                managar[] mng = MyManager.ToArray();
+                MyManager.Remove(mng[0]);
+                mng[0].mony += n;
+                amunt.Text = mng[0].mony.ToString();
+                MyManager.Add(mng[0]);
+                v = 0;
+                SaveInfoToDatabase();
             }
+        }
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         ////bikhial sherafatan!

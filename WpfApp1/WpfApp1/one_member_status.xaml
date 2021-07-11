@@ -17,7 +17,7 @@
                 <RowDefinition ></RowDefinition>
                 <RowDefinition ></RowDefinition>
             </Grid.RowDefinitions>
-            <TextBlock Text="input id :" FontFamily="Showcard Gothic" Grid.Row="0" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
+            <TextBlock Text="input name :" FontFamily="Showcard Gothic" Grid.Row="0" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
             <TextBox x:Name="name" Width=" 100" Height="20" Grid.Row="0" Margin="182,23,511.333,17" ></TextBox>
             <TextBlock Text="name :" FontFamily="Showcard Gothic" Grid.Row="1" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
             <TextBlock Text="mony :" FontFamily="Showcard Gothic" Grid.Row="2" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
@@ -25,8 +25,8 @@
             <TextBlock Text="email :" FontFamily="Showcard Gothic" Grid.Row="4" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
             <TextBlock Text="phone Number :" FontFamily="Showcard Gothic" Grid.Row="5" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
             <TextBlock Text="Renew membership date :" FontFamily="Showcard Gothic" Grid.Row="6" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
-            
-            
+
+
             <TextBlock x:Name="nametxt" FontFamily="Showcard Gothic" Grid.Row="1" VerticalAlignment="Center" Margin="150 0 0 0"></TextBlock>
             <TextBlock x:Name="monytxt" FontFamily="Showcard Gothic" Grid.Row="2" VerticalAlignment="Center" Margin="150 0 0 0"></TextBlock>
             <TextBlock x:Name="monthlypaymenttxt" FontFamily="Showcard Gothic" Grid.Row="3" VerticalAlignment="Center" Margin="200 0 0 0"></TextBlock>
@@ -34,6 +34,7 @@
             <TextBlock x:Name="phoneNutxt" FontFamily="Showcard Gothic" Grid.Row="5" VerticalAlignment="Center" Margin="200 0 0 0"></TextBlock>
             <TextBlock x:Name="Renewmembershipdatetxt" FontFamily="Showcard Gothic" Grid.Row="6" VerticalAlignment="Center" Margin="250 0 0 0"></TextBlock>
             <Button Content="submit" HorizontalAlignment="Left" Margin="380,23,0,0" VerticalAlignment="Top" Width="75" Click="find_person_btn"/>
+            <Button Content="back" HorizontalAlignment="Left" Margin="693,29.333,0,0" Grid.Row="6" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         </Grid>
     </Grid>
 </Window>
