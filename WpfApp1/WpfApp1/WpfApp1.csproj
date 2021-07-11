@@ -55,6 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddOrDeleteEmployee.xaml.cs">
+      <DependentUpon>AddOrDeleteEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllBooks.xaml.cs">
+      <DependentUpon>AllBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Allemployees.xaml.cs">
+      <DependentUpon>Allemployees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="books.xaml.cs">
+      <DependentUpon>books.xaml</DependentUpon>
+    </Compile>
     <Compile Include="employee panel.xaml.cs">
       <DependentUpon>employee panel.xaml</DependentUpon>
     </Compile>
@@ -100,6 +112,22 @@
     <Compile Include="user.xaml.cs">
       <DependentUpon>user.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddOrDeleteEmployee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AllBooks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Allemployees.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="books.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="employee panel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
