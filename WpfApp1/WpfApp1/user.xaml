@@ -26,6 +26,7 @@
             </StackPanel>
             <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="sign in" Click="sign_in"></Button>
             <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="back"  Margin="10,21.667,0,20.667" Click="back"></Button>
+            <Button Content="Sign Up" HorizontalAlignment="Left" Margin="159,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         </Grid>
 
     </Grid>
