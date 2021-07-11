@@ -96,13 +96,21 @@ namespace WpfApp1 {
             return;
             case 3:
             
+            #line 25 "..\..\employee panel.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_1);
+            
+            #line default
+            #line hidden
+            return;
+            case 4:
+            
             #line 26 "..\..\employee panel.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.LogOut);
             
             #line default
             #line hidden
             return;
-            case 4:
+            case 5:
             this.nametxt = ((System.Windows.Controls.TextBlock)(target));
             return;
             }

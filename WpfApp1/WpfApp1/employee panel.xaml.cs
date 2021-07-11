@@ -412,6 +412,12 @@ namespace WpfApp1
             return tmp;
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            employee_personal_info epi = new employee_personal_info(this.EmpUserName);
+            epi.Show();
+        }
+
         //returns a string, which consists of information of all members *******
         public string EmployeesInfo()
         {

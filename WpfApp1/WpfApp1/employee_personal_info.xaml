@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.employee_personal_info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="employee_personal_info" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <TextBlock Text="name :" Width="200" Height="30" Margin="66,64,527.333,326.667"></TextBlock>
+            <TextBlock x:Name="nametxt" Width="200" Height="30" Margin="288,64,305.333,326.667"></TextBlock>
+            <TextBlock Text="user name :" Width="200" Height="30" Margin="66,107,527.333,283.667"/>
+            <TextBlock x:Name="usernametxt" Width="200" Height="30" Margin="288,99,305.333,291.667"/>
+            <TextBlock Text="email :" Width="200" Height="30" Margin="66,154,527.333,236.667"/>
+            <TextBlock Text="date of Recruitment:" Width="200" Height="30" Margin="66,207,527.333,183.667"/>
+            <TextBlock x:Name="date" Width="200" Height="30" Margin="288,200,305.333,190.667"/>
+            <TextBlock Text="old password:" Width="200" Height="30" Margin="66,242,527.333,148.667"/>
+            <TextBlock Text="new password:" Width="200" Height="30" Margin="66,277,527.333,113.667"/>
+            <TextBlock Text="repeat new password :" Width="200" Height="30" Margin="66,312,527.333,78.667"/>
+
+            <TextBox x:Name="email" Width="200" Height="30" Margin="288,154,305.333,236.667"></TextBox>
+            <TextBox x:Name="oldpass" Width="200" Height="30" Margin="288,235,305.333,155.667"/>
+            <TextBox x:Name="newpass" Width="200" Height="30" Margin="288,270,305.333,120.667"/>
+            <TextBox x:Name="newpassrepeat" Width="200" Height="30" Margin="288,305,305.333,85.667"/>
+            <Button Content="change email" HorizontalAlignment="Left" Margin="608,163,0,0" VerticalAlignment="Top" Width="75" Name="chemail" Click="chemail_Click"/>
+            <Button Content="change password" HorizontalAlignment="Left" Margin="608,285,0,0" VerticalAlignment="Top" Width="108" Name="chpass" Click="chpass_Click"/>
+            <Button Content="back" HorizontalAlignment="Left" Margin="66,372,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        </Grid>
+        
+    </Grid>
+</Window>

@@ -273,23 +273,23 @@ namespace WpfApp1
             string name = this.nametxt.Text;
             string email = this.emailtxt.Text;
             string pass = this.passwordtxt.Text;
-            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-            Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
-            if (reemail.IsMatch(this.emailtxt.Text))
+
+            if (validateemail())
             {
-                if (validatePhoneNu(this.phonetxt.Text) && passwordtxt.Text == repasswordtxt.Text)
+                if (PhoneNuvalidate() && passwordtxt.Text == repasswordtxt.Text)
                 {
 
+                    member m = new member(this.nametxt.Text, passwordtxt.Text, 0, 2500, emailtxt.Text, phonetxt.Text, DateTime.Now, DateTime.Now.AddMonths(1),0);
+                    MyMembers.Add(m);
+                    SaveInfoToDatabase();
                     
-    
-                    //add this member to data base
                     user_panel usp = new user_panel(this.nametxt.Text, this.passwordtxt.Text);
                     usp.Show();
                     this.Close();
                 }
                 else
                 {
-                    if(!validatePhoneNu(this.phonetxt.Text))
+                    if(!PhoneNuvalidate())
                     {
                         MessageBox.Show("wrong phone number");
                     }
@@ -307,18 +307,37 @@ namespace WpfApp1
                     }
                 }
             }
-            else
-            {
-                MessageBox.Show("please input an email adress");
-            }
+
         }
 
-                
-        
-        public bool validatePhoneNu(string pNu)
-        {
 
-            return true;
+
+        public bool validateemail()
+        {
+            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+            Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
+            if (reemail.IsMatch(this.emailtxt.Text))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("invalid email input!");
+                return false;
+            }
+        }
+        public bool PhoneNuvalidate()
+        {
+            Regex rx = new Regex("^(09)\\d{9}$", RegexOptions.IgnoreCase);
+            if (rx.IsMatch(this.phonetxt.Text))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("wrong phone Number!");
+                return false;
+            }
         }
 
         private void back(object sender, RoutedEventArgs e)

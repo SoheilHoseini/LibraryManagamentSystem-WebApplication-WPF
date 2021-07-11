@@ -505,6 +505,11 @@ namespace WpfApp1
             return Result;
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         //returns the member's account balance
         public string MemberAccountBalance()
         {

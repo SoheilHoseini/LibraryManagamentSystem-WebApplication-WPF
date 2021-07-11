@@ -11,16 +11,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for personal_info.xaml
+    /// Interaction logic for employee_personal_info.xaml
     /// </summary>
-    public partial class personal_info : Window
+    
+    public partial class employee_personal_info : Window
     {
         //init "THE 5 LISTS" of all info stored in the database
         public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
@@ -256,14 +258,62 @@ namespace WpfApp1
             //close the connection to database
             con.Close();
         }
-
-
-
-        public personal_info()
+        string usernameemployee;
+        public employee_personal_info(string username)
         {
             InitializeComponent();
-
             GetInfoFromDatabase();
+            employe[] emp = MyEmployees.Where(x => x.username == username).ToArray();
+            this.nametxt.Text = emp[0].name;
+            this.date.Text = emp[0].dateofRecruitment.ToString();
+            this.usernametxt.Text = username;
+            this.usernameemployee = username;
+        }
+
+        private void chemail_Click(object sender, RoutedEventArgs e)
+        {
+            employe[] emp = MyEmployees.Where(x => x.username == usernameemployee).ToArray();
+
+            if(validateemail())
+            {
+                MyEmployees.Remove(emp[0]);
+                emp[0].email = email.Text;
+                MyEmployees.Add(emp[0]);
+                SaveInfoToDatabase();
+            }
+
+            
+        }
+        public bool validateemail()
+        {
+            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+            Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
+            if (reemail.IsMatch(this.email.Text))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("invalid email input!");
+                return false;
+            }
+        }
+
+        private void chpass_Click(object sender, RoutedEventArgs e)
+        {
+            employe[] emp = MyEmployees.Where(x => x.username == usernameemployee).ToArray();
+            if (this.oldpass.Text==emp[0].pass && newpass.Text==newpassrepeat.Text)
+            {
+                MyEmployees.Remove(emp[0]);
+                emp[0].pass = newpass.Text;
+                MyEmployees.Add(emp[0]);
+                SaveInfoToDatabase();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
