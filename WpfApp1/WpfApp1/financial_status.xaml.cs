@@ -402,7 +402,7 @@ namespace WpfApp1
                 amunt.Text = mng[0].mony.ToString();
                 MyManager.Add(mng[0]);
                 v = 0;
-                SaveInfoToDatabase();
+                UpdateInfoOfDatabase();
             }
         }
 

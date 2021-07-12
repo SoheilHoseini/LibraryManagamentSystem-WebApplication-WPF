@@ -383,7 +383,16 @@ namespace WpfApp1
 
         private void All_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = MyBooks;
+            ObservableCollection<object> All = new ObservableCollection<object>();
+            foreach(Book b in MyBooks)
+            {
+                All.Add(b);
+            }
+            foreach(BorrowedBooks b in MyBorrowedBooks)
+            {
+                All.Add(b);
+            }
+            DataContext = All;
             this.titletxt.Text = "All books";
         }
 
@@ -395,7 +404,7 @@ namespace WpfApp1
 
         private void existing_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = MyBooks.Where(x => x.borrowed == false);//***************
+            DataContext = MyBooks ;//***************
             this.titletxt.Text = "existing books";
         }
 

@@ -367,8 +367,7 @@ namespace WpfApp1
 
 
 
-        Library ELib;
-        employe employe1;
+
         string EmpUserName, EmpPassword;
 
         public employee_panel(string username, string password)
@@ -377,7 +376,8 @@ namespace WpfApp1
             GetInfoFromDatabase();
             //initialize Elib
             //query -->employe1 = library.employes.where(x=>x.email==email&&x.password==password) 
-            this.nametxt.Text =  "sth";//witch shoud be given from query --> employe1.name
+            employe[] em = MyEmployees.Where(x => x.name == username).ToArray();
+            this.nametxt.Text = em[0].name;
             this.EmpUserName = username;
             this.EmpPassword = password;
 

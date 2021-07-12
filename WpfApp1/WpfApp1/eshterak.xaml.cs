@@ -381,8 +381,11 @@ namespace WpfApp1
             member[] members = MyMembers.Where(x => x.name == name).ToArray();
             if (members[0].mony>=members[0].monthlypayment)
             {
+                MyMembers.Remove(members[0]);
                 members[0].mony -= members[0].monthlypayment;
                 members[0].Renewmembershipdate.AddDays(30);
+                MyMembers.Add(members[0]);
+                UpdateInfoOfDatabase();
                 MessageBox.Show("sucsesfuly done!");
             }
             else

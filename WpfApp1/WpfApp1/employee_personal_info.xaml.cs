@@ -371,7 +371,7 @@ namespace WpfApp1
         {
             InitializeComponent();
             GetInfoFromDatabase();
-            employe[] emp = MyEmployees.Where(x => x.username == username).ToArray();
+            employe[] emp = MyEmployees.Where(x => x.name == username).ToArray();
             this.nametxt.Text = emp[0].name;
             this.date.Text = emp[0].dateofRecruitment.ToString();
             this.usernametxt.Text = username;
@@ -380,14 +380,14 @@ namespace WpfApp1
 
         private void chemail_Click(object sender, RoutedEventArgs e)
         {
-            employe[] emp = MyEmployees.Where(x => x.username == usernameemployee).ToArray();
+            employe[] emp = MyEmployees.Where(x => x.name == usernameemployee).ToArray();
 
             if(validateemail())
             {
                 MyEmployees.Remove(emp[0]);
                 emp[0].email = email.Text;
                 MyEmployees.Add(emp[0]);
-                SaveInfoToDatabase();
+                UpdateInfoOfDatabase();
             }
 
             
@@ -409,13 +409,13 @@ namespace WpfApp1
 
         private void chpass_Click(object sender, RoutedEventArgs e)
         {
-            employe[] emp = MyEmployees.Where(x => x.username == usernameemployee).ToArray();
+            employe[] emp = MyEmployees.Where(x => x.name == usernameemployee).ToArray();
             if (this.oldpass.Text==emp[0].pass && newpass.Text==newpassrepeat.Text)
             {
                 MyEmployees.Remove(emp[0]);
                 emp[0].pass = newpass.Text;
                 MyEmployees.Add(emp[0]);
-                SaveInfoToDatabase();
+                UpdateInfoOfDatabase();
             }
         }
 

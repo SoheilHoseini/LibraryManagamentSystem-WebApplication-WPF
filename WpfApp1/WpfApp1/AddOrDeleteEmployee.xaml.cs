@@ -416,14 +416,14 @@ namespace WpfApp1
                     int v = 0;
                     foreach(employe emp in MyEmployees)
                     {
-                        if(emp.name==this.name.Text || emp.email==this.emailtxt.Text||emp.username==this.user_name.Text)
+                        if(emp.name==this.name.Text || emp.email==this.emailtxt.Text)
                         {
                             v = 1;
                         }
                     }
                     if(v==0)
                     {
-                        employe em = new employe(this.name.Text, this.passtxt.Text, this.user_name.Text, 0, this.emailtxt.Text, this.phoneNutxt.Text, DateTime.Now);
+                        employe em = new employe(this.name.Text, this.passtxt.Text,  0, this.emailtxt.Text, this.phoneNutxt.Text, DateTime.Now);
                         MyEmployees.Add(em);
                         SaveInfoToDatabase();
                     }

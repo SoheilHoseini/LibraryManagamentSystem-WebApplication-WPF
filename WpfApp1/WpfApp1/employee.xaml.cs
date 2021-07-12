@@ -378,26 +378,19 @@ namespace WpfApp1
 
         private void sign_in(object sender, RoutedEventArgs e)
         {
-            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-            Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
-            if (reemail.IsMatch(usname.Text))
+            if (checkInfo(usname.Text, pass.ToString()))
             {
-                if (checkInfo(usname.Text, pass.ToString()))
-                {
-                    employee_panel empl = new employee_panel(usname.Text, pass.ToString());
-                    this.Close();
-                    empl.Show();
+                employee_panel empl = new employee_panel(usname.Text, pass.ToString());
+                this.Close();
+                empl.Show();
 
-                }
-                else
-                {
-                    MessageBox.Show("wrong info()");
-                }
             }
             else
             {
-                MessageBox.Show("please input an email adress");
+                MessageBox.Show("wrong info()");
             }
+
+
         }
 
         //check the intered info with data base

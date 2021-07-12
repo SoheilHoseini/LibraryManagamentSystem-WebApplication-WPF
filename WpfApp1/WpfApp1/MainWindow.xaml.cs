@@ -398,7 +398,7 @@ namespace WpfApp1
     }
     public class managar
     {
-        public List<double> payments;
+        //public List<double> payments;
         public string name { get; set; }
         public string pass { get; set; }
         public float mony { get; set; }
@@ -434,12 +434,12 @@ namespace WpfApp1
         public DateTime dateofsignup { get; set; }
         public DateTime Renewmembershipdate { get; set; }
         public int BorrowedbookNU { get; set; }
-        public ImageSource avatar { get; set; }
+
         public member(string name, string pass, float mony, float monthlypayment, string email, string phoneNu, DateTime dateofsignup, DateTime Renewmembershipdate, int BorrowedbookNU)
         {
             this.name = name;
             this.pass = pass;
-            this.mony = monthlypayment;
+            this.mony = mony;
             this.monthlypayment = monthlypayment;
             this.email = email;
             this.phoneNu = phoneNu;
@@ -466,22 +466,21 @@ namespace WpfApp1
 
     public class employe
     {
-        public string username { get; set; }
-        public double payment { get; set; }
+
+        //public double payment { get; set; }
         public string name { get; set; }
         public string pass { get; set; }
         public double mony { get; set; }
         public string email { get; set; }
         public string phoneNu { get; set; }
         public DateTime dateofRecruitment { get; set; }
-        public string avatarImgPass { get; set; }
+
 
         //constructor
-        public employe(string name, string pass, string username, int mony, string email, string phoneNu, DateTime dateofRecruitment)
+        public employe(string name, string pass,  int mony, string email, string phoneNu, DateTime dateofRecruitment)
         {
             this.name = name;
             this.pass = pass;
-            this.username = username;
             this.email = email;
             this.phoneNu = phoneNu;
             this.dateofRecruitment = dateofRecruitment;
@@ -512,9 +511,8 @@ namespace WpfApp1
 
     public struct Book
     {
-        public bool borrowed;//?
-        public member owner;//?
-        public DateTime borrowedDay;//?
+
+        //public DateTime borrowedDay;//?
         public string name;
         public string writer;
         public int count;
