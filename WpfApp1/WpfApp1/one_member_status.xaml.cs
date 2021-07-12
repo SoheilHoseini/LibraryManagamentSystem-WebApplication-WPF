@@ -33,6 +33,8 @@ namespace WpfApp1
         //get information from data base and store it in "THE 5 LISTS"
         public void GetInfoFromDatabase()
         {
+            string command1, command2, command3, command4, command5;
+
             //tmporary objects
             Book tmpBook;
             BorrowedBooks tmpBorrowedBooks;
@@ -40,47 +42,15 @@ namespace WpfApp1
             managar tmpManager;
             member tmpMember;
 
-            //open the connection to database
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
-            string command1, command2, command3, command4, command5;
+            //////books
+            SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+            con1.Open();
 
-            //take info of all books from database
             command1 = "select * from Books";
-            SqlDataAdapter adapter1 = new SqlDataAdapter(command1, con);
-
-            command2 = "select * from BorrowedBooks";
-            SqlDataAdapter adapter2 = new SqlDataAdapter(command2, con);
-
-            command3 = "select * from Employees";
-            SqlDataAdapter adapter3 = new SqlDataAdapter(command3, con);
-
-            command4 = "select * from Manager";
-            SqlDataAdapter adapter4 = new SqlDataAdapter(command4, con);
-
-            command5 = "select * from Members";
-            SqlDataAdapter adapter5 = new SqlDataAdapter(command5, con);
-
-
-            //we can't get the info from adapter, so we just pour the info in data to manipulate
+            SqlDataAdapter adapter1 = new SqlDataAdapter(command1, con1);
             DataTable data1 = new DataTable();
             adapter1.Fill(data1);
 
-            DataTable data2 = new DataTable();
-            adapter2.Fill(data2);
-
-            DataTable data3 = new DataTable();
-            adapter3.Fill(data3);
-
-            DataTable data4 = new DataTable();
-            adapter4.Fill(data4);
-
-            DataTable data5 = new DataTable();
-            adapter5.Fill(data5);
-
-            //get info from database, make objects and save to THE 5 LISTS!
-
-            //books
             for (int i = 0; i < data1.Rows.Count; i++)
             {
                 try
@@ -98,7 +68,21 @@ namespace WpfApp1
                 }
             }
 
-            //borrowed books
+            SqlCommand com1 = new SqlCommand(command1, con1);
+            com1.ExecuteNonQuery();
+            con1.Close();
+
+
+
+            //////borrowed books
+            SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+            con2.Open();
+
+            command2 = "select * from BorrowedBooks";
+            SqlDataAdapter adapter2 = new SqlDataAdapter(command2, con2);
+            DataTable data2 = new DataTable();
+            adapter2.Fill(data2);
+
             for (int i = 0; i < data2.Rows.Count; i++)
             {
                 try
@@ -116,7 +100,21 @@ namespace WpfApp1
                 }
             }
 
-            //employees
+            SqlCommand com2 = new SqlCommand(command2, con2);
+            com2.ExecuteNonQuery();
+            con2.Close();
+
+
+
+            //////employees
+            SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+            con3.Open();
+
+            command3 = "select * from Employees";
+            SqlDataAdapter adapter3 = new SqlDataAdapter(command3, con3);
+            DataTable data3 = new DataTable();
+            adapter3.Fill(data3);
+
             for (int i = 0; i < data3.Rows.Count; i++)
             {
                 try
@@ -136,7 +134,21 @@ namespace WpfApp1
                 }
             }
 
-            //manager
+            SqlCommand com3 = new SqlCommand(command3, con3);
+            com3.ExecuteNonQuery();
+            con3.Close();
+
+
+
+            //////manager
+            SqlConnection con4 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+            con4.Open();
+
+            command4 = "select * from Manager";
+            SqlDataAdapter adapter4 = new SqlDataAdapter(command4, con4);
+            DataTable data4 = new DataTable();
+            adapter4.Fill(data4);
+
             for (int i = 0; i < data4.Rows.Count; i++)
             {
                 try
@@ -155,7 +167,21 @@ namespace WpfApp1
                 }
             }
 
-            //member
+            SqlCommand com4 = new SqlCommand(command4, con4);
+            com4.ExecuteNonQuery();
+            con4.Close();
+
+
+
+            //////member
+            SqlConnection con5 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+            con5.Open();
+
+            command5 = "select * from Members";
+            SqlDataAdapter adapter5 = new SqlDataAdapter(command5, con5);
+            DataTable data5 = new DataTable();
+            adapter5.Fill(data5);
+
             for (int i = 0; i < data5.Rows.Count; i++)
             {
                 try
@@ -178,86 +204,167 @@ namespace WpfApp1
                 }
             }
 
-            //execution of the command
-            SqlCommand com1 = new SqlCommand(command1, con);
-            SqlCommand com2 = new SqlCommand(command2, con);
-            SqlCommand com3 = new SqlCommand(command3, con);
-            SqlCommand com4 = new SqlCommand(command4, con);
-            SqlCommand com5 = new SqlCommand(command5, con);
-
-            //execute the command
-            com1.BeginExecuteNonQuery();
-            com2.BeginExecuteNonQuery();
-            com3.BeginExecuteNonQuery();
-            com4.BeginExecuteNonQuery();
-            com5.BeginExecuteNonQuery();
-
-            //close the connection to database
-            con.Close();
-
+            SqlCommand com5 = new SqlCommand(command5, con5);
+            com5.ExecuteNonQuery();
+            con5.Close();
         }
 
-        //save changed "THE 5 LISTS" to the database
+        //save the FIRST info to the database
         public void SaveInfoToDatabase()
         {
-            //open the connection to database
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
             string command1, command2, command3, command4, command5;
+            //update info
+            //command = "update Table1 SET name = '" + "ahmad" + "', age = '" + 15 + "' , employed = '" + true + "' where name = '" + a + "' ";
 
             //book
-            //command1 = "insert into Employees values('" + name.Trim() + "' ,'" + pass.Trim() + "' )";
             foreach (var x in MyBooks)
             {
+                SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con1.Open();
+
                 command1 = "insert into Books values('" + x.name + "', '" + x.writer + "', '" + x.count + "', '" + x.publicationNum + "')";
                 //execution of the command
-                SqlCommand com1 = new SqlCommand(command1, con);
-                com1.BeginExecuteNonQuery();
+                SqlCommand com1 = new SqlCommand(command1, con1);
+                com1.ExecuteNonQuery();
+                con1.Close();
             }
 
             //borrowed books
             foreach (var x in MyBorrowedBooks)
             {
+                SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con2.Open();
+
                 command2 = "insert into BorrowedBooks values('" + x.name + "', '" + x.writer + "', '" + x.publicationNum + "', '" + x.memberName + "')";
                 //execution of the command
-                SqlCommand com2 = new SqlCommand(command2, con);
-                com2.BeginExecuteNonQuery();
+                SqlCommand com2 = new SqlCommand(command2, con2);
+                com2.ExecuteNonQuery();
+                con2.Close();
             }
 
             //employees
             foreach (var x in MyEmployees)
             {
+                SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con3.Open();
+
                 command3 = "insert into Employees values('" + x.name + "', '" + x.pass + "', '" + x.email + "', '" + x.phoneNu + "', '" + x.mony + "', '" + x.dateofRecruitment + "')";
                 //execution of the command
-                SqlCommand com3 = new SqlCommand(command3, con);
-                com3.BeginExecuteNonQuery();
+                SqlCommand com3 = new SqlCommand(command3, con3);
+                com3.ExecuteNonQuery();
+
+                con3.Close();
             }
 
             //manager
             foreach (var x in MyManager)
             {
+                SqlConnection con4 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con4.Open();
+
                 command4 = "insert into Manager values('" + x.name + "', '" + x.pass + "','" + x.email + "','" + x.mony + "','" + x.phoneNu + "')";
                 //execution of the command
-                SqlCommand com4 = new SqlCommand(command4, con);
-                com4.BeginExecuteNonQuery();
+                SqlCommand com4 = new SqlCommand(command4, con4);
+                com4.ExecuteNonQuery();
+
+                con4.Close();
             }
 
             //member
             foreach (var x in MyMembers)
             {
-                command5 = "insert into Members values('" + x.name + "','" + x.pass + "','" + x.email + "'" +
-                                                     ",'" + x.phoneNu + "','" + x.mony + "'" +
-                                                     ",'" + x.monthlypayment + "','" + x.BorrowedbookNU + "'" +
-                                                     ",'" + x.dateofsignup + "','" + x.Renewmembershipdate + "')";
-                //execution of the command
-                SqlCommand com5 = new SqlCommand(command5, con);
-                com5.BeginExecuteNonQuery();
-            }
 
-            //close the connection to database
-            con.Close();
+                SqlConnection con5 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con5.Open();
+
+                command5 = "insert into Members values('" + x.name + "','" + x.pass + "','" + x.email + "','" + x.phoneNu + "','" + x.mony + "','" + x.monthlypayment + "','" + x.BorrowedbookNU + "' ,'" + x.dateofsignup + "','" + x.Renewmembershipdate + "')";
+                //execution of the command
+                SqlCommand com5 = new SqlCommand(command5, con5);
+                com5.ExecuteNonQuery();
+                con5.Close();
+            }
         }
 
+        //update the changes of "THE 5 LISTS" to the database
+        public void UpdateInfoOfDatabase()
+        {
+            string command1, command2, command3, command4, command5;
+            //update info
+            //command = "update Table1 SET name = '" + "ahmad" + "', age = '" + 15 + "' , employed = '" + true + "' where name = '" + a + "' ";
+
+            //book
+            foreach (var x in MyBooks)
+            {
+                SqlConnection con1 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con1.Open();
+                command1 = "update Books SET writer = '" + x.writer + "', count = '" + x.count + "', publicationNum = '" + x.publicationNum + "' where name = '" + x.name + "' ";
+                //command1 = "insert into Books values('" + x.name + "', '" + x.writer + "', '" + x.count + "', '" + x.publicationNum + "')";
+
+                //execution of the command
+                SqlCommand com1 = new SqlCommand(command1, con1);
+                com1.ExecuteNonQuery();
+                con1.Close();
+            }
+
+            //borrowed books
+            foreach (var x in MyBorrowedBooks)
+            {
+                SqlConnection con2 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con2.Open();
+                command2 = "update BorrowedBooks SET writer = '" + x.writer + "', memberName = '" + x.memberName + "', publicationNum = '" + x.publicationNum + "' where name = '" + x.name + "' ";
+                //command2 = "insert into BorrowedBooks values('" + x.name + "', '" + x.writer + "', '" + x.publicationNum + "', '" + x.memberName + "')";
+
+                //execution of the command
+                SqlCommand com2 = new SqlCommand(command2, con2);
+                com2.ExecuteNonQuery();
+                con2.Close();
+            }
+
+            //employees
+            foreach (var x in MyEmployees)
+            {
+                SqlConnection con3 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con3.Open();
+                command3 = "update Employees SET password = '" + x.pass + "', email = '" + x.email + "', phonenum = '" + x.phoneNu + "', money = '" + x.mony + "', dateOfRecruitment = '" + x.dateofRecruitment + "' where name = '" + x.name + "' ";
+                //command3 = "insert into Employees values('" + x.name + "', '" + x.pass + "', '" + x.email + "', '" + x.phoneNu + "', '" + x.mony + "', '" + x.dateofRecruitment + "')";
+
+                //execution of the command
+                SqlCommand com3 = new SqlCommand(command3, con3);
+                com3.ExecuteNonQuery();
+
+                con3.Close();
+            }
+
+            //manager
+            foreach (var x in MyManager)
+            {
+                SqlConnection con4 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con4.Open();
+                command4 = "update Manager SET password = '" + x.pass + "', email = '" + x.email + "', money = '" + x.mony + "', phoneNum = '" + x.phoneNu + "' where name = '" + x.name + "' ";
+                //command4 = "insert into Manager values('" + x.name + "', '" + x.pass + "','" + x.email + "','" + x.mony + "','" + x.phoneNu + "')";
+
+                //execution of the command
+                SqlCommand com4 = new SqlCommand(command4, con4);
+                com4.ExecuteNonQuery();
+
+                con4.Close();
+            }
+
+            //member
+            foreach (var x in MyMembers)
+            {
+
+                SqlConnection con5 = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+                con5.Open();
+                command5 = "update Members SET password = '" + x.pass + "', email = '" + x.email + "', phoneNum = '" + x.phoneNu + "', money = '" + x.mony + "', monthlyPayment = '" + x.monthlypayment + "', BorrowedBookNum = '" + x.BorrowedbookNU + "', dateOfSignUp = '" + x.dateofsignup + "', RenewMemberShipDate = '" + x.Renewmembershipdate + "' where memberName = '" + x.name + "' ";
+                //command5 = "insert into Members values('" + x.name + "','" + x.pass + "','" + x.email + "','" + x.phoneNu + "','" + x.mony + "','" + x.monthlypayment + "','" + x.BorrowedbookNU + "' ,'" + x.dateofsignup + "','" + x.Renewmembershipdate + "')";
+
+                //execution of the command
+                SqlCommand com5 = new SqlCommand(command5, con5);
+                com5.ExecuteNonQuery();
+                con5.Close();
+            }
+        }
 
 
 

@@ -79,6 +79,9 @@
     <Compile Include="employee_personal_info.xaml.cs">
       <DependentUpon>employee_personal_info.xaml</DependentUpon>
     </Compile>
+    <Compile Include="eshterak.xaml.cs">
+      <DependentUpon>eshterak.xaml</DependentUpon>
+    </Compile>
     <Compile Include="financial_status.xaml.cs">
       <DependentUpon>financial_status.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="employee_personal_info.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="eshterak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
