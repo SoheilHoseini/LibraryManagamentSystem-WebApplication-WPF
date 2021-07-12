@@ -451,6 +451,7 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             member_sign_up msu = new member_sign_up();
+            msu.Show();
             this.Close();
         }
     }

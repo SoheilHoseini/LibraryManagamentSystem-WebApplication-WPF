@@ -381,12 +381,12 @@ namespace WpfApp1
         {
             
             this.nam = name.Text;
-            this.nametxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.name).ToString();
-            this.monytxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.mony).ToString();
-            this.monthlypaymenttxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.monthlypayment).ToString();
-            this.emailtxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.email).ToString();
-            this.phoneNutxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.phoneNu).ToString();
-            this.Renewmembershipdatetxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.Renewmembershipdate).ToString();
+            this.nametxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.name).ToArray()[0];
+            this.monytxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.mony).ToArray()[0].ToString();
+            this.monthlypaymenttxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.monthlypayment).ToArray()[0].ToString();
+            this.emailtxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.email).ToArray()[0];
+            this.phoneNutxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.phoneNu).ToArray()[0].ToString();
+            this.Renewmembershipdatetxt.Text = MyMembers.Where(x => x.name == nam).Select(x => x.Renewmembershipdate).ToArray()[0].ToString();
 
 
         }

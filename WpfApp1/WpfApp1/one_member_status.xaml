@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="one_member_status" Height="450" Width="800">
+        Title="One Member Status" Height="450" Width="800" >
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -17,8 +17,17 @@
                 <RowDefinition ></RowDefinition>
                 <RowDefinition ></RowDefinition>
             </Grid.RowDefinitions>
+            <Border CornerRadius="10" Grid.RowSpan="7" Margin="0,0,-0.4,0">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FFFFF284" Offset="0.0"/>
+                        <GradientStop Color="#FFFFC900" Offset="1.0"/>
+                        <GradientStop Color="#FF9A820E" Offset="0.245"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
             <TextBlock Text="input name :" FontFamily="Showcard Gothic" Grid.Row="0" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
-            <TextBox x:Name="name" Width=" 100" Height="20" Grid.Row="0" Margin="182,23,511.333,17" ></TextBox>
+            <TextBox x:Name="name" Width=" 100" Grid.Row="0" Margin="182,10,511.6,10" />
             <TextBlock Text="name :" FontFamily="Showcard Gothic" Grid.Row="1" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
             <TextBlock Text="mony :" FontFamily="Showcard Gothic" Grid.Row="2" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
             <TextBlock Text="monthly payment :" FontFamily="Showcard Gothic" Grid.Row="3" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
@@ -33,8 +42,8 @@
             <TextBlock x:Name="emailtxt" FontFamily="Showcard Gothic" Grid.Row="4" VerticalAlignment="Center" Margin="150 0 0 0"></TextBlock>
             <TextBlock x:Name="phoneNutxt" FontFamily="Showcard Gothic" Grid.Row="5" VerticalAlignment="Center" Margin="200 0 0 0"></TextBlock>
             <TextBlock x:Name="Renewmembershipdatetxt" FontFamily="Showcard Gothic" Grid.Row="6" VerticalAlignment="Center" Margin="250 0 0 0"></TextBlock>
-            <Button Content="submit" HorizontalAlignment="Left" Margin="380,23,0,0" VerticalAlignment="Top" Width="75" Click="find_person_btn"/>
-            <Button Content="back" HorizontalAlignment="Left" Margin="693,29.333,0,0" Grid.Row="6" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+            <Button Content="Submit" HorizontalAlignment="Left" Margin="370,18,0,0" VerticalAlignment="Top" Width="75" Click="find_person_btn" Background="#FF656501"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="696,13,0,0" Grid.Row="6" VerticalAlignment="Top" Width="75" Click="Button_Click" Background="#FF656501"/>
         </Grid>
     </Grid>
 </Window>

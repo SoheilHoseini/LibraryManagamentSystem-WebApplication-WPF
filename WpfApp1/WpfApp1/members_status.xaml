@@ -5,34 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="members_status" Height="450" Width="800">
+        Title="members_status" Height="450" Width="800" Background="Aquamarine">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
-                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition Height="3*"></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+
             </Grid.RowDefinitions>
 
             <ScrollViewer Grid.Row="1">
-                <ItemsControl  ItemsSource="{Binding members}">
+                <ItemsControl  ItemsSource="{Binding MyMembers}" Width="692" Height="133">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Text="{Binding name}"></TextBlock>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding phoneNu}"></TextBlock>
+                                <TextBlock Grid.Column="0" Grid.Row="0" Text="{Binding name}"></TextBlock>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
             <ScrollViewer Grid.Row="3">
-                <ItemsControl  ItemsSource="{Binding delayeTopay}">
+                <ItemsControl  ItemsSource="{Binding delayeTopay}" RenderTransformOrigin="0.494,0.556" Width="695" Height="104">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -45,27 +49,9 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
-            <ScrollViewer Grid.Row="5">
-                <ItemsControl  ItemsSource="{Binding delayeToReturn}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition></RowDefinition>
-                                </Grid.RowDefinitions>
-                                <TextBlock Grid.Row="0" Text="{Binding name}"></TextBlock>
-                            </Grid>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
-            
-            
-            
 
-            <TextBlock Grid.Row="0" FontFamily="Showcard Gothic" Text="All members"></TextBlock>
-            <TextBlock Grid.Row="2" FontFamily="Showcard Gothic" Text="delaye To pay"></TextBlock>
-            <TextBlock Grid.Row="4" FontFamily="Showcard Gothic" Text="delaye To Return"></TextBlock>
+            <TextBlock Grid.Row="0" FontFamily="Showcard Gothic" Text="All members" Margin="43,30,594.6,151.4" Grid.RowSpan="2"></TextBlock>
+            <TextBlock Grid.Row="2" FontFamily="Showcard Gothic" Text="delaye To pay" Margin="43,0,-0.4,0.2"></TextBlock>
         </Grid>
 
     </Grid>

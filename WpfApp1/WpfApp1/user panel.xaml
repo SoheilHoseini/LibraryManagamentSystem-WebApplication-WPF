@@ -19,20 +19,29 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
+            <Border CornerRadius="10" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF9A5F03" Offset="0"/>
+                        <GradientStop Color="#FFBF9700" Offset="0.245"/>
+                        <GradientStop Color="#FFE7F361" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
 
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="books" Margin="198.667,19,113.667,270" Height="33" Width="85" Click="Button_Click" ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="my books" Margin="198.667,69,113.667,220" Height="33" Width="85" Click="Button_Click_1"  ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="status" Margin="198.667,120,113.667,169" Height="33" Width="85" Click="Button_Click_2"></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="wallet" Margin="198.667,172,113.667,117" Height="33" Width="85"></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="personal info" Margin="198.667,230,113.667,59" Height="33" Width="85"></Button>
-            <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="log out"  Height="33" Width="85" Click="LogOut"></Button>
+            <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Books" Margin="42.2,26.6,254.6,228.4" Height="65" Width="100" Click="Button_Click" Grid.Column="1" Background="#FFFFC000"/>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="My Books" Margin="195.2,26.6,101.6,228.4" Height="65" Width="100" Click="Button_Click_1"   Background="#FFFFC000"></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Status" Margin="42.2,115.6,254.6,139.4" Height="65" Width="100" Click="Button_Click_2" Background="#FFFFC000"></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Wallet" Margin="195.2,115.6,101.6,139.4" Height="65" Width="100" RenderTransformOrigin="0.403,0.232" Background="#FFFFC000"></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Personal Info" Margin="98.2,213.6,158.6,38.4" Height="68" Width="140" Background="#FFFFC000"></Button>
+            <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Log Out"  Height="33" Width="85" Click="LogOut" Background="#FFFFC000"></Button>
             <TextBlock x:Name="nametxt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="173.667,24,89.667,10" Width="134"  ></TextBlock>
 
         </Grid>
 
 
-        <Image  Grid.Column="0" Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Width="400" Height="300" Margin="0,50,394.667,72"/>
-        <Image Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Margin="700,15,46.667,366" RenderTransformOrigin="0.243,0.541"/>
+        <Image  Grid.Column="0" Source="C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\male user avatar.png" Width="400" Height="300" Margin="0,50,394.667,72"/>
+
     </Grid>
 </Window>
 

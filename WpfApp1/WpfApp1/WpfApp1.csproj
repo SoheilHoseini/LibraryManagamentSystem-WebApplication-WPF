@@ -117,9 +117,6 @@
     <Compile Include="payment.xaml.cs">
       <DependentUpon>payment.xaml</DependentUpon>
     </Compile>
-    <Compile Include="pay_history.xaml.cs">
-      <DependentUpon>pay_history.xaml</DependentUpon>
-    </Compile>
     <Compile Include="user panel.xaml.cs">
       <DependentUpon>user panel.xaml</DependentUpon>
     </Compile>
@@ -207,10 +204,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="payment.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pay_history.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

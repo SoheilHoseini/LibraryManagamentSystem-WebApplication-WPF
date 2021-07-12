@@ -19,17 +19,24 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="book list" Margin="173.333,76,113.333,198.667" Height="46" Width="110" Click="Button_Click" ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="members status" Margin="173.333,147,113.333,127.667" Height="46" Width="110" Click="membersStatus_btn"  ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="personal info" Margin="173.333,217,113.333,58.667" Height="45" Width="110" Click="Button_Click_1"></Button>
-            <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="log out"  Height="33" Width="85" Click="LogOut"></Button>
-            <TextBlock x:Name="nametxt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="173.667,24,89.667,10" Width="134"  ></TextBlock>
+            <Border CornerRadius="10" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF40023A" Offset="0"/>
+                        <GradientStop Color="#FF970088" Offset="0.245"/>
+                        <GradientStop Color="#FFFFAACF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Book List" Margin="227.2,48.6,35.6,183.4" Height="88" Width="134" Click="Button_Click"  Background="#FFD370F0"></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Members Status" Margin="34.2,48.6,228.6,183.4" Height="88" Width="134" Click="membersStatus_btn"  Background="#FFD370F0" ></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Personal Info" Margin="129.2,192.6,133.6,40.4" Height="87" Width="134" Click="Button_Click_1" Background="#FFD370F0"></Button>
+            <Button Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Log out"  Height="33" Width="85" Click="LogOut"  Background="#FFD370F0" Margin="50,319.6,261.8,17" Grid.RowSpan="2"></Button>
+            <TextBlock x:Name="nametxt" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="151,223.6,97.8,26.4" Width="148" Height="70" FontSize="30" Foreground="{StaticResource PrimaryHueDarkForegroundBrush}"  FontFamily="Gabriola" Grid.Row="1" />
 
         </Grid>
 
 
-        <Image  Grid.Column="0" Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Width="400" Height="300" Margin="0,50,394.667,72"/>
-        <Image Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Margin="700,15,46.667,366" RenderTransformOrigin="0.243,0.541"/>
+        <Image  Grid.Column="0" Source="C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\employee.png" Margin="69,33,440.6,164"/>
     </Grid>
 </Window>

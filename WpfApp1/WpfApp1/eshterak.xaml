@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="eshterak" Height="450" Width="800">
+        Title="eshterak" Height="450" Width="800" Background="#FF00DFFF">
     <Grid>
         <Grid>
-            <TextBlock Text="your sign up date :" Margin="54,163,495.333,217.667"></TextBlock>
-            <TextBlock Text="your should pay membership this time : " Margin="54,81,495.333,299.667"></TextBlock>
+            <TextBlock Text="Your Sign Up Date :" Margin="54,163,495.333,217.667"></TextBlock>
+            <TextBlock Text="Your Should Pay Membership This Time : " Margin="54,81,495.333,299.667"></TextBlock>
 
-            <TextBlock x:Name="signup" Margin="378,163,170.333,217.667"></TextBlock>
-            <TextBlock x:Name="membership" Margin="378,81,169.333,299.667"/>
-            <Button Content="pay for another month" HorizontalAlignment="Left" Margin="328,264,0,0" VerticalAlignment="Top" Width="180" Name="pay" Click="pay_Click"/>
-            <Button Content="back" HorizontalAlignment="Left" Margin="89,351,0,0" VerticalAlignment="Top" Width="66" x:Name="back" Click="back_Click" />
+            <TextBlock x:Name="signup" Margin="378,162,168.6,218"></TextBlock>
+            <TextBlock x:Name="membership" Margin="378,81,168.6,299"/>
+            <Button Content="Pay for Another Month" HorizontalAlignment="Left" Margin="328,264,0,0" VerticalAlignment="Top" Width="183" Name="pay" Click="pay_Click" Height="67" Background="#FF006D82"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="54,366,0,0" VerticalAlignment="Top" Width="66" x:Name="back" Click="back_Click" Background="#FF006D82"/>
         </Grid>
 
     </Grid>

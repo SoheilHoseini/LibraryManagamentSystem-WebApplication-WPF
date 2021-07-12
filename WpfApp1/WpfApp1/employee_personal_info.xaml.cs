@@ -366,16 +366,18 @@ namespace WpfApp1
                 con5.Close();
             }
         }
+
         string usernameemployee;
         public employee_personal_info(string username)
         {
             InitializeComponent();
             GetInfoFromDatabase();
+
             employe[] emp = MyEmployees.Where(x => x.name == username).ToArray();
             this.nametxt.Text = emp[0].name;
             this.date.Text = emp[0].dateofRecruitment.ToString();
-            this.usernametxt.Text = username;
             this.usernameemployee = username;
+            this.moneyAmount.Text = emp[0].mony.ToString();
         }
 
         private void chemail_Click(object sender, RoutedEventArgs e)
@@ -422,6 +424,32 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void chemail_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                payment P = new payment(double.Parse(this.increaseAmount.Text));
+                P.Show();
+
+                foreach(var x in MyEmployees)
+                {
+                    if (x.name == usernameemployee)
+                    {
+                        x.mony += double.Parse(this.increaseAmount.Text);
+                        UpdateInfoOfDatabase();
+                        break;
+                    }
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("You should enter float value!");
+            }
+            
+
         }
     }
 }

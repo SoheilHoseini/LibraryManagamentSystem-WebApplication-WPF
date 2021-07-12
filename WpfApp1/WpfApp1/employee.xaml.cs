@@ -378,16 +378,16 @@ namespace WpfApp1
 
         private void sign_in(object sender, RoutedEventArgs e)
         {
-            if (checkInfo(usname.Text, pass.ToString()))
+            if (checkInfo(usname.Text, pass.Text))
             {
-                employee_panel empl = new employee_panel(usname.Text, pass.ToString());
+                employee_panel empl = new employee_panel(usname.Text, pass.Text);
                 this.Close();
                 empl.Show();
 
             }
             else
             {
-                MessageBox.Show("wrong info()");
+                MessageBox.Show("Invalid Input!");
             }
 
 
@@ -396,40 +396,16 @@ namespace WpfApp1
         //check the intered info with data base
         public bool checkInfo(string usname, string pass)
         {
-            //open the connection to database
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
-
-            con.Open();
-            string command;
-            bool userFound = false;
-
-            //take all info of the maneger from database
-            command = "select * from Employees";
-            SqlDataAdapter adapter = new SqlDataAdapter(command, con);
-            DataTable data = new DataTable();
-            adapter.Fill(data);//we can't get the info from adapter, so we just pour the info in data to manipulate
-
-            //check if there is a user with this info
-            for(int i = 0; i < data.Rows.Count; i++)
+            foreach(var x in MyEmployees)
             {
-                if(data.Rows[i][0].ToString() == usname && data.Rows[i][1].ToString() == pass )
+                if (x.name == usname && x.pass == pass)
                 {
-                    userFound = true;
-                    break;
+                    return true;
                 }
+                //MessageBox.Show(x.name + x.pass);
             }
 
-            //execution of the command
-            SqlCommand com = new SqlCommand(command, con);
-            com.BeginExecuteNonQuery(); //execute the command
-            //close the connection to database
-            con.Close();
-
-            if (userFound)
-                return true;
-
-            else
-                return false;
+            return false;
         }
 
 

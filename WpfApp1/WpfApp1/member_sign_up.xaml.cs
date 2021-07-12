@@ -376,6 +376,29 @@ namespace WpfApp1
             GetInfoFromDatabase();
         }
 
+        //add member to database
+        public void AddMemberToDatabase(string name, string pass, string email, string phNum, float money,float monthPay,int borrBnum, DateTime signUp, DateTime memShip)
+        {
+            //open the connection to database
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+
+            con.Open();
+            string command;
+
+            command = "insert into Members values('" + name + "' ,'" + pass + "' ,'" + email + "' ,'" + phNum + "' ,'" + money + "' ,'" + monthPay + "' ,'" + borrBnum + "' ,'" + signUp + "' ,'" + memShip + "' )";
+
+            //execution of the command
+            SqlCommand com = new SqlCommand(command, con);
+
+            //execute the command
+            com.ExecuteNonQuery();
+
+            //close the connection to database
+            con.Close();
+        }
+
+
+
         public void Sign_up_btn(object sender, RoutedEventArgs e)
         {
             string name = this.nametxt.Text;
@@ -389,7 +412,7 @@ namespace WpfApp1
 
                     member m = new member(this.nametxt.Text, passwordtxt.Text, 0, 2500, emailtxt.Text, phonetxt.Text, DateTime.Now, DateTime.Now.AddMonths(1),0);
                     MyMembers.Add(m);
-                    SaveInfoToDatabase();
+                    AddMemberToDatabase(this.nametxt.Text, passwordtxt.Text, emailtxt.Text, phonetxt.Text, 0, 2500,0, DateTime.Now, DateTime.Now.AddMonths(1));
                     
                     user_panel usp = new user_panel(this.nametxt.Text, this.passwordtxt.Text);
                     usp.Show();

@@ -460,7 +460,12 @@ namespace WpfApp1
         public void pay() { }
         public void ChangeInfo() { }
         public void ChangPersonalInfo() { }
-        public int Daysmembershipremaining() { return 0; }
+        public int Daysmembershipremaining() 
+        {
+            DateTime today = DateTime.Now;
+            int res = DateTime.Compare(this.Renewmembershipdate, today);
+            return res;
+        }
 
     }
 

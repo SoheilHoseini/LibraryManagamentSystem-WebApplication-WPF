@@ -390,7 +390,7 @@ namespace WpfApp1
             SqlCommand com = new SqlCommand(command, con);
 
             //execute the command
-            com.BeginExecuteNonQuery();
+            com.ExecuteNonQuery();
 
             //close the connection to database
             con.Close();
@@ -399,9 +399,11 @@ namespace WpfApp1
 
         private void remove_btn_Click(object sender, RoutedEventArgs e)
         {
-            employe employeToRemove = ((Button)sender).Tag as employe;
+            employe employeToRemove = ((Button)sender).Tag as employe;         
+            
+            MyEmployees.Remove(employeToRemove);
             DeleteEmployee(employeToRemove.name);
-            MyEmployees.Remove(employeToRemove);       
+            MessageBox.Show("Employee deleted!");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

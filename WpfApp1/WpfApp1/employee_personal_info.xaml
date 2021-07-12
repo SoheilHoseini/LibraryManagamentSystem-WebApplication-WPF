@@ -5,28 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="employee_personal_info" Height="450" Width="800">
+        Title="Employee Personal Info" Height="450" Width="800" Background="#FF9F093A">
     <Grid>
         <Grid>
-            <TextBlock Text="name :" Width="200" Height="30" Margin="66,64,527.333,326.667"></TextBlock>
-            <TextBlock x:Name="nametxt" Width="200" Height="30" Margin="288,64,305.333,326.667"></TextBlock>
-            <TextBlock Text="user name :" Width="200" Height="30" Margin="66,107,527.333,283.667"/>
-            <TextBlock x:Name="usernametxt" Width="200" Height="30" Margin="288,99,305.333,291.667"/>
-            <TextBlock Text="email :" Width="200" Height="30" Margin="66,154,527.333,236.667"/>
-            <TextBlock Text="date of Recruitment:" Width="200" Height="30" Margin="66,207,527.333,183.667"/>
-            <TextBlock x:Name="date" Width="200" Height="30" Margin="288,200,305.333,190.667"/>
-            <TextBlock Text="old password:" Width="200" Height="30" Margin="66,242,527.333,148.667"/>
-            <TextBlock Text="new password:" Width="200" Height="30" Margin="66,277,527.333,113.667"/>
-            <TextBlock Text="repeat new password :" Width="200" Height="30" Margin="66,312,527.333,78.667"/>
+            <TextBlock Text="Name :" Width="200" Height="30" Margin="66,35,527.6,355"></TextBlock>
+            <TextBlock x:Name="nametxt" Width="200" Height="30" Margin="288,35,305.6,355"></TextBlock>
+            <TextBlock Text="Email:" Width="200" Margin="65,199,528.6,189"/>
+            <TextBlock Text="Date of Recruitment:" Width="200" Height="30" Margin="65,70,528.6,320"/>
+            <TextBlock x:Name="date" Width="200" Height="30" Margin="288,70,305.6,320"/>
+            <TextBlock Text="Old Password:" Width="200" Height="30" Margin="66,242,527.333,148.667"/>
+            <TextBlock Text="New Password:" Width="200" Height="30" Margin="66,277,527.333,113.667"/>
+            <TextBlock Text="Repeat New Password :" Width="200" Height="30" Margin="66,312,527.333,78.667"/>
 
-            <TextBox x:Name="email" Width="200" Height="30" Margin="288,154,305.333,236.667"></TextBox>
+            <TextBox x:Name="email" Width="200" Margin="288,199,305.6,189"/>
             <TextBox x:Name="oldpass" Width="200" Height="30" Margin="288,235,305.333,155.667"/>
             <TextBox x:Name="newpass" Width="200" Height="30" Margin="288,270,305.333,120.667"/>
             <TextBox x:Name="newpassrepeat" Width="200" Height="30" Margin="288,305,305.333,85.667"/>
-            <Button Content="change email" HorizontalAlignment="Left" Margin="608,163,0,0" VerticalAlignment="Top" Width="75" Name="chemail" Click="chemail_Click"/>
-            <Button Content="change password" HorizontalAlignment="Left" Margin="608,285,0,0" VerticalAlignment="Top" Width="108" Name="chpass" Click="chpass_Click"/>
-            <Button Content="back" HorizontalAlignment="Left" Margin="66,372,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+            <Button Content="Change Email" HorizontalAlignment="Left" Margin="577,199,0,0" VerticalAlignment="Top" Width="139" Name="chemail" Click="chemail_Click" Height="32" Background="#FF690022"/>
+            <Button Content="Change Password" HorizontalAlignment="Left" Margin="577,270,0,0" VerticalAlignment="Top" Width="139" Name="chpass" Click="chpass_Click" Height="52"  Background="#FF690022"/>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="23,365,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"  Background="#FF690022"/>
+            <TextBlock Text="Money:" Width="200" Height="30" Margin="66,105,527.6,285"/>
+            <TextBlock x:Name="moneyAmount" Width="200" Height="30" Margin="288,105,305.6,285"/>
+            <Button Content="Increase Balance" HorizontalAlignment="Left" Margin="577,103,0,0" VerticalAlignment="Top" Width="139" x:Name="chemail_Copy"  Height="32" Background="#FF690022" Click="chemail_Copy_Click"/>
+            <TextBox x:Name="increaseAmount" Margin="577,140,77.6,248"/>
         </Grid>
-        
+
     </Grid>
 </Window>

@@ -390,7 +390,7 @@ namespace WpfApp1
             }
             catch
             {
-                MessageBox.Show("enter name of one employee !");
+                MessageBox.Show("There is no employee with this name!");
             }
             
         }
@@ -401,14 +401,36 @@ namespace WpfApp1
             {
                 employe[] employees = MyEmployees.Where(x => x.name == person.Text).ToArray();
                 MyEmployees.Remove(employees[0]);
+                DeleteEmployee(employees[0].name);
+                MessageBox.Show("Employee removed from database baby!");
                 v = 0;
             }
             else
             {
                 MessageBox.Show("input employee's name first!");
             }
-            SaveInfoToDatabase();
         }
+
+        //takes info of an employee as input and save it to database
+        public void DeleteEmployee(string name)
+        {
+            //open the connection to database
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+
+            con.Open();
+            string command;
+
+            command = "delete from Employees where name = '" + name + "' ";
+            //execution of the command
+            SqlCommand com = new SqlCommand(command, con);
+
+            //execute the command
+            com.ExecuteNonQuery();
+
+            //close the connection to database
+            con.Close();
+        }
+
 
         //takes info of an employee as input and save it to database
         public void AddEmployeeToDatabase(string name, string pass, string email, string phNum, int money, DateTime dt)
@@ -441,16 +463,16 @@ namespace WpfApp1
                     int v = 0;
                     foreach(employe emp in MyEmployees)
                     {
-                        if(emp.name==this.name.Text || emp.email==this.emailtxt.Text)
+                        if(emp.name==this.nametxtAdd.Text || emp.email==this.emailtxt.Text)
                         {
                             v = 1;
                         }
                     }
                     if(v==0)
                     {
-                        employe em = new employe(this.name.Text, this.passtxt.Text,  0, this.emailtxt.Text, this.phoneNutxt.Text, DateTime.Now);
+                        employe em = new employe(this.nametxtAdd.Text, this.passtxt.Text,  0, this.emailtxt.Text, this.phoneNutxt.Text, DateTime.Now);
                         MyEmployees.Add(em);
-                        AddEmployeeToDatabase(this.name.Text, this.passtxt.Text, this.emailtxt.Text, this.phoneNutxt.Text, 0, DateTime.Now);
+                        AddEmployeeToDatabase(this.nametxtAdd.Text, this.passtxt.Text, this.emailtxt.Text, this.phoneNutxt.Text, 0, DateTime.Now);
                         MessageBox.Show("You successfully added an employee bro!");
                         this.Close();
                     }

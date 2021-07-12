@@ -8,8 +8,8 @@
         Title="AddOrDeleteEmployee" Height="450" Width="800" Background="RosyBrown">
     <Grid>
         <Grid>
-            <Button Content="search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="679,35,0,0" Click="search"  Background="#FFA65B7B"/>
-            <TextBlock Text="enter name of employee how you want to dismis :" Margin="36,70,463.333,320.667" Height="30" ></TextBlock>
+            <Button Content="Search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="679,35,0,0" Click="search"  Background="#FFA65B7B"/>
+            <TextBlock Text="Enter name of employee how you want to dismis :" Margin="36,70,463.333,320.667" Height="30" ></TextBlock>
             <TextBlock Text="Dissmis" FontFamily="Showcard Gothic" FontSize="20" Margin="35,27,463.333,363.667" Height="30" ></TextBlock>
             <TextBox x:Name="name" Height="30" Margin="378,65,192.333,325.667"/>
             <Button Content="Dissmis" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="679,91,0,0" Click="delete"  Background="#FFA65B7B"/>

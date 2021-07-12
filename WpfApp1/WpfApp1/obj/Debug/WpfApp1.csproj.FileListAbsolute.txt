@@ -116,7 +116,6 @@ C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\D
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\member_sign_up.g.cs
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\one_member_status.g.cs
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\payment.g.cs
-C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\pay_history.g.cs
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user panel.g.cs
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user.g.cs
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\App.g.cs
@@ -146,7 +145,6 @@ C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\D
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\member_sign_up.baml
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\one_member_status.baml
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\payment.baml
-C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\pay_history.baml
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user panel.baml
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user.baml
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources

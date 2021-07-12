@@ -23,11 +23,11 @@ namespace WpfApp1
     public partial class members_status : Window
     {
         //init "THE 5 LISTS" of all info stored in the database
-        public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
-        public static ObservableCollection<employe> MyEmployees = new ObservableCollection<employe>();
-        public static ObservableCollection<member> MyMembers = new ObservableCollection<member>();
-        public static ObservableCollection<Book> MyBooks = new ObservableCollection<Book>();
-        public static ObservableCollection<BorrowedBooks> MyBorrowedBooks = new ObservableCollection<BorrowedBooks>();
+        public static ObservableCollection<managar> MyManager { get; set; }
+        public static ObservableCollection<employe> MyEmployees { get; set; }
+        public static ObservableCollection<member> MyMembers { get; set; }
+        public static ObservableCollection<Book> MyBooks { get; set; }
+        public static ObservableCollection<BorrowedBooks> MyBorrowedBooks { get; set; }
 
         //get information from data base and store it in "THE 5 LISTS"
         public void GetInfoFromDatabase()
@@ -365,41 +365,43 @@ namespace WpfApp1
             }
         }
 
+        public static ObservableCollection<member> delayeTopay { get; set; }
 
-
-
-        Library Elib;
-        public ObservableCollection<member> delayeTopay;
-        public ObservableCollection<member> members;
-        public ObservableCollection<member> delayeToReturn;
+        //public ObservableCollection<member> delayeToReturn;
         public members_status()
         {
+            MyManager = new ObservableCollection<managar>();
+            MyEmployees = new ObservableCollection<employe>();
+            MyMembers = new ObservableCollection<member>();
+            MyBooks = new ObservableCollection<Book>();
+            MyBorrowedBooks = new ObservableCollection<BorrowedBooks>();
+            delayeTopay = new ObservableCollection<member>();
+
             InitializeComponent();
 
             GetInfoFromDatabase();
             //initialize Elib
+
             foreach (member m in MyMembers.Where(x => x.Daysmembershipremaining() < 0))
             {
                 delayeTopay.Add(m);
             }
-            foreach(member m in MyMembers)
-            {
-                ObservableCollection<Book> books2 = m.Borrowed;
-                int v = 0;
-                foreach(Book b in books2.Where(x=>x.timeremaining()<0))
-                {
-                    ++v;
-                }
-                if(v>0)
-                {
-                    delayeToReturn.Add(m);
-                }
+
+            //foreach(member m in MyMembers)
+            //{
+            //    ObservableCollection<Book> books2 = m.Borrowed;
+            //    int v = 0;
+            //    foreach(Book b in books2.Where(x=>x.timeremaining()<0))
+            //    {
+            //        ++v;
+            //    }
+            //    if(v>0)
+            //    {
+            //        delayeToReturn.Add(m);
+            //    }
                 
-            }
-            foreach(member m in MyMembers)
-            {
-                members.Add(m);
-            }
+            //}
+
             DataContext = this;
         }
     }

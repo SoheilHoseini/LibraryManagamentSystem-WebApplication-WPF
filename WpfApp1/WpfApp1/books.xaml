@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="books" Height="450" Width="800">
+        Title="books" Height="450" Width="800" Background="#FF4EFCFF">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -40,17 +40,17 @@
                 </ItemsControl>
 
             </ScrollViewer>
-            <TextBlock Text="search with name :" Width="200" Height="30" Grid.ColumnSpan="2" Margin="28,10,433.333,80"></TextBlock>
-            <Button Content="back" HorizontalAlignment="Left" Margin="28,23,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+            <TextBlock Text="search with name :" Width="200" Height="30" Grid.ColumnSpan="2" Margin="28,27,433.6,63"></TextBlock>
+            <Button Content="back" HorizontalAlignment="Left" Margin="28,23,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="Button_Click" Background="#FF368FE2"/>
 
             <TextBox x:Name="withname" Width="200" Height="30" Grid.Column="1" Margin="59.333,10,269.333,80"></TextBox>
-            <TextBlock Text="search with writer :" Width="200" Height="30" Grid.ColumnSpan="2" Margin="28,60,433.333,30"/>
-            <TextBox x:Name="withwriter" Width="200" Height="30" Grid.Column="1" Margin="59.333,60,269.333,30"/>
+            <TextBlock Text="search with writer :" Width="200" Height="30" Grid.ColumnSpan="2" Margin="28,77,433.6,13"/>
+            <TextBox x:Name="withwriter" Width="200" Height="30" Grid.Column="1" Margin="0,60,269.6,30" HorizontalAlignment="Right"/>
             <TextBlock x:Name="info1" Height="30" Margin="293.333,10,25.333,80" Grid.Column="1" Grid.ColumnSpan="2"/>
             <TextBlock x:Name="info2" Height="30" Margin="293.333,60,24.333,30" Grid.Column="1" Grid.ColumnSpan="2"/>
-            <Button Content="?" Width="15" Height="20" Grid.Column="1" Margin="16.333,10,497.333,90" Name="search1" Click="search1_Click"></Button>
-            <Button Content="?" Width="15" Height="20" Grid.Column="1" Margin="16.333,60,497.333,40" Name="search2" Click="search2_Click"/>
-            <Button Content="All Books" Height="20" Margin="38,10,29.667,210.667" x:Name="All" Click="All_Click"  Grid.Row="1"/>
+            <Button Content="?" Height="Auto" Grid.Column="1" Margin="10.2,16,474.6,74" Name="search1" Click="search1_Click" Background="#FF368FE2"/>
+            <Button Content="?" Height="Auto" Grid.Column="1" Margin="10.2,68,474.6,22" Name="search2" Click="search2_Click" Background="#FF368FE2"/>
+            <Button Content="All Books" Height="Auto" Margin="17,10,20.8,185" x:Name="All" Click="All_Click"  Grid.Row="1" Background="#FF368FE2"/>
         </Grid>
     </Grid>
 </Window>

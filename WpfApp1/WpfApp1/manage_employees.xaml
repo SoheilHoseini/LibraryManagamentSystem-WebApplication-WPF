@@ -29,9 +29,9 @@
             <Button Content="Dismiss" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="111" Height="65" Click="Delete" Margin="101,41,84.8,22.8" Background="#FFD370F0"/>
             <Button Content="Add" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="108" Height="65" Click="AddEmployee" Margin="101.2,41,87.6,22.8" Background="#FFD370F0"/>
             <Button Content="Show All" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="111" Height="61" Click="EmployeeShow" Margin="101,26.2,84.8,40.8" Background="#FFD370F0"/>
-            <Button Content="Deposit" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="108" Height="61" Click="pay" Margin="101.2,26.2,87.6,40.8" Background="#FFD370F0"/>
-            <Button Content="Back" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="75" Click="back" Margin="10,26.2,211.8,9.8" Height="28" Background="#FFD370F0"/>
-            <PasswordBox x:Name="passtxt" Grid.Row="1" Grid.Column="1" Height="19" VerticalAlignment="Bottom" Margin="112.2,0,104.6,49.8" Grid.RowSpan="2"/>
+            <Button Content="Deposit" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="108" Height="61" Click="pay" Margin="101.2,0,87.6,40.8" Background="#FFD370F0"/>
+            <Button Content="Back" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Click="back" Margin="10,26.2,206.8,9.8" Height="28" Background="#FFD370F0"/>
+            <PasswordBox x:Name="passtxt" Grid.Row="1" Grid.Column="1" Height="37" VerticalAlignment="Bottom" Margin="112.2,0,104.6,31.8" Grid.RowSpan="2"/>
             <TextBlock Text="Enter Password" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="112.2,0,0,9.8"/>
         </Grid>
 

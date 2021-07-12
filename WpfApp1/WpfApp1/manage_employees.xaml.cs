@@ -425,7 +425,7 @@ namespace WpfApp1
             {
                 foreach(employe Em in MyEmployees)
                 {
-                    Em.mony += 1000;
+                    Em.mony += 1000;              
                 }
                 MyManager[0].mony -= monyTopay;
                 UpdateInfoOfDatabase();

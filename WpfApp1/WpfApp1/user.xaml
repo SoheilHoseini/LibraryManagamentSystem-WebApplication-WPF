@@ -16,17 +16,26 @@
                 <RowDefinition></RowDefinition>
 
             </Grid.RowDefinitions>
+            <Border CornerRadius="10" Grid.RowSpan="5" Margin="0,0,-0.4,0.4" RenderTransformOrigin="0.5,0.5">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF620E00" Offset="0"/>
+                        <GradientStop Color="#FFFF4102" Offset="1"/>
+                        <GradientStop Color="#FF970000" Offset="0.245"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
             <StackPanel Grid.Row="0" VerticalAlignment="Center" >
                 <TextBlock HorizontalAlignment="Left" Text="Username :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
                 <TextBox Margin="20,20,19.333,20" Name="usname"/>
             </StackPanel>
             <StackPanel Grid.Row="1" VerticalAlignment="Center" >
-                <TextBlock HorizontalAlignment="Left" Text="password  :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
+                <TextBlock HorizontalAlignment="Left" Text="Password  :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
                 <PasswordBox Margin="20,20,19.333,20" Name="pass"></PasswordBox>
             </StackPanel>
-            <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="sign in" Click="sign_in"></Button>
-            <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="back"  Margin="10,21.667,0,20.667" Click="back"></Button>
-            <Button Content="Sign Up" HorizontalAlignment="Left" Margin="159,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+            <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Login" Click="sign_in" Height="48" Margin="160,16,126.6,0" Width="107" Background="#FFFF9562"></Button>
+            <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Back"  Margin="10,15.8,0,22.4" Click="back" Height="25" Background="#FFFF9562"></Button>
+            <Button Content="Sign Up" HorizontalAlignment="Left" Margin="160,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93" Click="Button_Click" Height="48" Background="#FFFF9562"/>
         </Grid>
 
     </Grid>
