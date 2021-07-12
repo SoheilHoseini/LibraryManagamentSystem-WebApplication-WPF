@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp1.eshterak"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="eshterak" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <TextBlock Text="your sign up date :" Margin="54,163,495.333,217.667"></TextBlock>
+            <TextBlock Text="your should pay membership this time : " Margin="54,81,495.333,299.667"></TextBlock>
+
+            <TextBlock x:Name="signup" Margin="378,163,170.333,217.667"></TextBlock>
+            <TextBlock x:Name="membership" Margin="378,81,169.333,299.667"/>
+            <Button Content="pay for another month" HorizontalAlignment="Left" Margin="328,264,0,0" VerticalAlignment="Top" Width="180" Name="pay" Click="pay_Click"/>
+            <Button Content="back" HorizontalAlignment="Left" Margin="89,351,0,0" VerticalAlignment="Top" Width="66" x:Name="back" Click="back_Click" />
+        </Grid>
+
+    </Grid>
+</Window>

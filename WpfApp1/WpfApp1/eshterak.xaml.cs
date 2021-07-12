@@ -18,9 +18,9 @@ using System.Data.SqlClient;
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for books.xaml
+    /// Interaction logic for eshterak.xaml
     /// </summary>
-    public partial class books : Window
+    public partial class eshterak : Window
     {
         //init "THE 5 LISTS" of all info stored in the database
         public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
@@ -256,40 +256,36 @@ namespace WpfApp1
             //close the connection to database
             con.Close();
         }
+        string name;
 
-
-
-
-        public books()
+        public eshterak(string name )
         {
             InitializeComponent();
-
             GetInfoFromDatabase();
-
-
-            DataContext = MyBooks;
+            this.name = name;
+            member[] members = MyMembers.Where(x => x.name == name).ToArray();
+            signup.Text = members[0].dateofsignup.ToString();
+            membership.Text = members[0].Renewmembershipdate.ToString();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void pay_Click(object sender, RoutedEventArgs e)
+        {
+            member[] members = MyMembers.Where(x => x.name == name).ToArray();
+            if (members[0].mony>=members[0].monthlypayment)
+            {
+                members[0].mony -= members[0].monthlypayment;
+                members[0].Renewmembershipdate.AddDays(30);
+                MessageBox.Show("sucsesfuly done!");
+            }
+            else
+            {
+                MessageBox.Show("you should first charge your walet! \n you can do it by going to your panel and selecting \n wallet option");
+            }
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void search1_Click(object sender, RoutedEventArgs e)
-        {
-            Book[] books2 = MyBooks.Where(x => x.name == withname.Text).ToArray();
-            info1.Text = "name = " + books2[0].name + " writer = " + books2[0].writer;
-        }
-
-        private void search2_Click(object sender, RoutedEventArgs e)
-        {
-            Book[] books1 = MyBooks.Where(x => x.writer == withwriter.Text).ToArray();
-            DataContext = books1;
-        }
-
-        private void All_Click(object sender, RoutedEventArgs e)
-        {
-            DataContext = MyBooks;
         }
     }
 }

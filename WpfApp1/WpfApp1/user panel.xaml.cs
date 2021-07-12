@@ -271,7 +271,8 @@ namespace WpfApp1
             GetInfoFromDatabase();
             //initilaiz Mlib
             //query --> member1 =library.members.where(x=>x.email==email&&x.password==password) 
-            this.nametxt.Text = "sth";//witch shoud be given from query --> member1.name
+            member[] members= MyMembers.Where(x => x.pass == Password).ToArray();
+            this.nametxt.Text = members[0].name;
             this.MemUsername = userName;
             this.MemPassword = Password;
         }
@@ -507,6 +508,13 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            member[] members = MyMembers.Where(x => x.pass == MemPassword).ToArray();
+            eshterak es = new eshterak(members[0].name);
 
         }
 
