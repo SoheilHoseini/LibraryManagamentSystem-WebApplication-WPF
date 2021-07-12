@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AddBook" Height="450" Width="800">
+        Title="AddBook" Height="450" Width="800" Background="PaleVioletRed">
     <Grid>
         <Grid>
             <TextBlock Text="Add Book :" Margin="73,28,541.333,362.667" FontSize="20" FontFamily="Showcard Gothic"></TextBlock>
@@ -16,9 +16,9 @@
             <TextBox x:Name="nametxt" Width="200" Height="30" Margin="285,99,308.333,291.667"></TextBox>
             <TextBox x:Name="writer" Width="200" Height="30" Margin="285,180,308.333,210.667"/>
             <TextBox x:Name="Nu" Width="200" Height="30" Margin="285,249,308.333,141.667"/>
-            <Button Content="ADD" Width="40" Height="40" Click="Button_Click" Margin="362,307,391.333,73.667"></Button>
-            <Button Content="back" Width="40" Height="30" Click="back" Margin="81,342,672.333,38.667"/>
+            <Button Content="ADD" Click="Button_Click" Margin="338,307,360.6,67" Background="Pink"/>
+            <Button Content="Back" Click="back" Margin="46,364,697.6,22" Background="Pink"/>
         </Grid>
-        
+
     </Grid>
 </Window>

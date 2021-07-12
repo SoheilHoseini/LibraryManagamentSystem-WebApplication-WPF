@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="manager" Height="500" Width="400">
+        Title="Manager" Height="500" Width="400" Background="DarkCyan">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -16,16 +16,18 @@
                 <RowDefinition></RowDefinition>
 
             </Grid.RowDefinitions>
+
             <StackPanel Grid.Row="0" VerticalAlignment="Center" >
                 <TextBlock HorizontalAlignment="Left" Text="Username :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
-                <TextBox Margin="20,20,19.333,20" Name="usname"/>
+                <TextBox Margin="20,20,19.6,20" Name="usname" Height="32"/>
             </StackPanel>
             <StackPanel Grid.Row="1" VerticalAlignment="Center" >
-                <TextBlock HorizontalAlignment="Left" Text="password  :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
-                <PasswordBox Margin="20,20,19.333,20" Name="pass"></PasswordBox>
+                <TextBlock HorizontalAlignment="Left" Text="Password  :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
+                <!--<PasswordBox Margin="20,20,19.333,20" Name="pass"></PasswordBox>-->
+                <TextBox Margin="20,20,19.6,20" Name="pass" Height="28"/>
             </StackPanel>
-            <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="sign in" Click="sign_in"></Button>
-            <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="back"  Margin="10,21.667,0,20.667" Click="back"></Button>
+            <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Log in" Click="sign_in" Height="42" Margin="159,22,151.6,0" Width="83" Background="CadetBlue"></Button>
+            <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="back"  Margin="10,22.8,0,21.4" Click="back" Width="57" Background="CadetBlue"></Button>
         </Grid>
 
     </Grid>

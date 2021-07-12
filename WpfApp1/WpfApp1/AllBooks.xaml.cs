@@ -23,11 +23,12 @@ namespace WpfApp1
     public partial class AllBooks : Window
     {
         //init "THE 5 LISTS" of all info stored in the database
-        public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
-        public static ObservableCollection<employe> MyEmployees = new ObservableCollection<employe>();
-        public static ObservableCollection<member> MyMembers = new ObservableCollection<member>();
-        public static ObservableCollection<Book> MyBooks = new ObservableCollection<Book>();
-        public static ObservableCollection<BorrowedBooks> MyBorrowedBooks = new ObservableCollection<BorrowedBooks>();
+        public static ObservableCollection<managar> MyManager { get; set; }
+        public static ObservableCollection<employe> MyEmployees { get; set; }
+        public static ObservableCollection<member> MyMembers { get; set; }
+        public static ObservableCollection<Book> MyBooks { get; set; }
+        public static ObservableCollection<BorrowedBooks> MyBorrowedBooks { get; set; }
+        public static ObservableCollection<object> AllB { get; set; }
 
         //get information from data base and store it in "THE 5 LISTS"
         public void GetInfoFromDatabase()
@@ -366,46 +367,51 @@ namespace WpfApp1
         }
 
 
-        Library lib;
-        public ObservableCollection<Book> books1;
+
+        //public ObservableCollection<Book> books1;
         public AllBooks()
         {
             InitializeComponent();
+            MyManager = new ObservableCollection<managar>();
+            MyEmployees = new ObservableCollection<employe>();
+            MyMembers = new ObservableCollection<member>();
+            MyBooks = new ObservableCollection<Book>();
+            MyBorrowedBooks = new ObservableCollection<BorrowedBooks>();
+            AllB = new ObservableCollection<object>();
+
             GetInfoFromDatabase();
-            //initilize lib
-            foreach (Book b in lib.books)
+            foreach (Book b in MyBooks)
             {
-                books1.Add(b);
+                AllB.Add(b);
             }
+            foreach (BorrowedBooks b in MyBorrowedBooks)
+            {
+                AllB.Add(b);
+            }
+            //foreach (Book b in MyBooks)
+            //{
+            //    books1.Add(b);
+            //}
             DataContext = MyBorrowedBooks;//***************
             this.titletxt.Text = "borrowd books";
         }
 
         private void All_Click(object sender, RoutedEventArgs e)
-        {
-            ObservableCollection<object> All = new ObservableCollection<object>();
-            foreach(Book b in MyBooks)
-            {
-                All.Add(b);
-            }
-            foreach(BorrowedBooks b in MyBorrowedBooks)
-            {
-                All.Add(b);
-            }
-            DataContext = All;
+        {                
+            DataContext = AllB;
             this.titletxt.Text = "All books";
         }
 
         private void borrowd_Click(object sender, RoutedEventArgs e)
         {
             DataContext = MyBorrowedBooks;//***************
-            this.titletxt.Text = "borrowd books";
+            this.titletxt.Text = "Borrowd Books";
         }
 
         private void existing_Click(object sender, RoutedEventArgs e)
         {
             DataContext = MyBooks ;//***************
-            this.titletxt.Text = "existing books";
+            this.titletxt.Text = "Existing Books";
         }
 
         private void back_Click(object sender, RoutedEventArgs e)

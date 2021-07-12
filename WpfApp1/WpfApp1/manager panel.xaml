@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="manager_panel" Height="450" Width="800" WindowStartupLocation="CenterScreen"
+        Title="Manager Panel" Height="450" Width="800" WindowStartupLocation="CenterScreen"
         >
 
     <Grid>
-        <Grid>
+        <Grid RenderTransformOrigin="0.521,0.492">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -19,19 +19,27 @@
                 <RowDefinition/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="employees" Margin="198.333,55,113.333,232.667" Height="33" Width="85" Click="Button_Click" ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Add book" Margin="198.333,119,113.333,168.667" Height="33" Width="85"  ></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="book list" Margin="198.333,183,113.333,104.667" Height="33" Width="85" Click="Button_Click_1"></Button>
-            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Financial" Margin="198.333,247,113.333,40.667" Height="33" Width="85" Click="financial"></Button>
-            <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="log out"  Height="33" Width="85" Click="LogOut"></Button>
+            <Border CornerRadius="10" Grid.RowSpan="3" Grid.ColumnSpan="2" Margin="0,0,-0.4,0">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF620E00" Offset="0"/>
+                        <GradientStop Color="#FFFF4102" Offset="1"/>
+                        <GradientStop Color="#FF970000" Offset="0.245"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Employees" Margin="198.2,51.6,79.6,193.4" Height="75" Width="119" Click="Button_Click" Background="#FFFAAA7C" ></Button>
+            <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Add Book" Margin="16.2,51.6,261.6,193.4" Height="75" Width="119" Grid.Column="1" Click="Button_Click_2"  Background="#FFFAAA7C"/>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Book List" Margin="198.2,199.6,79.6,45.4" Height="75" Width="119" Click="Button_Click_1" Background="#FFFAAA7C"></Button>
+            <Button Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Financial" Margin="16.2,199.6,261.6,45.4" Height="75" Width="119" Click="financial" Background="#FFFAAA7C"/>
+            <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Log out"  Height="40" Width="90" Click="LogOut" Background="#FFFAAA7C"></Button>
             <TextBlock x:Name="nametxt" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="173.667,24,89.667,10" Width="134"  ></TextBlock>
 
         </Grid>
 
 
-        <Image  Grid.Column="0" Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Width="400" Height="300" Margin="0,50,394.667,72"/>
-        <Image Source="D:\programing\C#\project\WpfApp1\WpfApp1\pgl.png" Margin="700,15,46.667,366" RenderTransformOrigin="0.243,0.541"/>
+        <Image  Grid.Column="0" Source="C:\Users\sahand\Desktop\University\AP\WPF Project\amirhosein\WpfApp1\admin avatar.png" Margin="47,85,441.6,125"/>
+
     </Grid>
 </Window>
 

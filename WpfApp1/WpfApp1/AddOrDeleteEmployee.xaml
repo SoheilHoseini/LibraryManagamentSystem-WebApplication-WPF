@@ -5,34 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="AddOrDeleteEmployee" Height="450" Width="800">
+        Title="AddOrDeleteEmployee" Height="450" Width="800" Background="RosyBrown">
     <Grid>
         <Grid>
-            <Button Content="search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="679,68,0,0" Click="search"/>
+            <Button Content="search" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="679,35,0,0" Click="search"  Background="#FFA65B7B"/>
             <TextBlock Text="enter name of employee how you want to dismis :" Margin="36,70,463.333,320.667" Height="30" ></TextBlock>
             <TextBlock Text="Dissmis" FontFamily="Showcard Gothic" FontSize="20" Margin="35,27,463.333,363.667" Height="30" ></TextBlock>
             <TextBox x:Name="name" Height="30" Margin="378,65,192.333,325.667"/>
-            <Button Content="Dissmis" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="679,119,0,0" Click="delete"/>
+            <Button Content="Dissmis" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="679,91,0,0" Click="delete"  Background="#FFA65B7B"/>
 
 
-            <TextBlock Text="Add Employee" FontFamily="Showcard Gothic" FontSize="20" Margin="34,139,462.333,251.667" Height="30" />
-            <TextBlock Text="name :" FontFamily="Showcard Gothic" FontSize="15" Margin="38,203,456.333,187.667" Height="30" />
-            <TextBlock Text="email :" FontFamily="Showcard Gothic" FontSize="15" Margin="39,228,455.333,162.667" Height="30" />
-            <TextBlock Text="payment amunt :" FontFamily="Showcard Gothic" FontSize="15" Margin="38,263,456.333,127.667" Height="30" />
-            <TextBlock Text="password :" FontFamily="Showcard Gothic" FontSize="15" Margin="36,293,459.333,97.667" Height="30" />
-            <TextBlock Text="repeat password :" FontFamily="Showcard Gothic" FontSize="15" Margin="33,323,461.333,67.667" Height="30" />
+            <TextBlock Text="Add Employee" FontFamily="Showcard Gothic" FontSize="20" Margin="32,122,463.6,268" Height="30" />
+            <TextBlock Text="name :" FontFamily="Showcard Gothic" FontSize="15" Margin="35,223,458.6,167" Height="30" />
+            <TextBlock Text="email :" FontFamily="Showcard Gothic" FontSize="15" Margin="38,272,455.6,118" Height="30" />
 
-            <TextBox x:Name="nametxtAdd" Height="30" Width="200" Margin="294,198,299.333,192.667"></TextBox>
-            <TextBox x:Name="emailtxt" Height="30" Width="200" Margin="294,228,299.333,162.667"/>
-            <TextBox x:Name="paymanttxt" Height="30" Width="200" Margin="294,258,299.333,132.667"/>
-            <TextBox x:Name="passtxt" Height="30" Width="200" Margin="294,288,299.333,102.667"/>
-            <TextBox x:Name="repasstxt" Height="30" Width="200" Margin="294,318,299.333,72.667"/>
-            <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Margin="620,289,0,0" Height="45" Click="AddEmpoyee"/>
+            <TextBlock Text="password :" FontFamily="Showcard Gothic" FontSize="15" Margin="38,327,456.6,63" Height="30" />
+            <TextBlock Text="repeat password :" FontFamily="Showcard Gothic" FontSize="15" Margin="38,380,455.6,10" Height="30" />
+
+            <TextBox x:Name="nametxtAdd" Height="30" Width="200" Margin="317,223,276.6,167"></TextBox>
+            <TextBox x:Name="emailtxt" Height="30" Width="200" Margin="317,272,276.6,118"/>
+            <TextBox x:Name="passtxt" Height="30" Width="200" Margin="317,327,276.6,63"/>
+            <TextBox x:Name="repasstxt" Height="30" Width="200" Margin="317,380,276.6,10"/>
+            <Button Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Margin="679,246,0,0" Height="71" Click="AddEmpoyee" Background="#FFA65B7B"/>
             <TextBlock x:Name="person" Margin="381,113,182.333,277.667" Height="30" />
-            <TextBlock Text="phone Number :" FontFamily="Showcard Gothic" FontSize="15" Margin="36,174,457.333,216.667" Height="30" />
-            <TextBox x:Name="phoneNutxt" Height="30" Width="200" Margin="294,168,299.333,222.667"/>
-            <TextBlock Text="user name :" FontFamily="Showcard Gothic" FontSize="15" Margin="31,353,462.333,37.667" Height="30" />
-            <TextBox x:Name="user_name" Height="30" Width="200" Margin="294,348,299.333,42.667"/>
+            <TextBlock Text="phone Number :" FontFamily="Showcard Gothic" FontSize="15" Margin="35,168,457.6,222" Height="30" />
+            <TextBox x:Name="phoneNutxt" Height="30" Width="200" Margin="317,168,276.6,222"/>
 
         </Grid>
 

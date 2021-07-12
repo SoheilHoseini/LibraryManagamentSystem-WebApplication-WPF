@@ -365,18 +365,13 @@ namespace WpfApp1
             }
         }
 
-
-
-        managar manager1;
-        Library lib;
-
         public manager_panel(string email , string password)
         {
             InitializeComponent();
             GetInfoFromDatabase();
             //initialize Lib
             //query -->managar1= library.manager
-            this.nametxt.Text = "sth";//witch shoud be given from query --> manager1.name
+            
 
         }
 
@@ -408,67 +403,7 @@ namespace WpfApp1
             Ab.Show();
         }
 
-        //takes info of a Book as input and store it to Data base
-        private void AddBook(string Name, string Writer, int pubNum)
-        {
-            int previousCount = 0;
-            string command, command2;
-            bool bookFound = false;
-
-            //open the connection to database
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();          
-
-            //take info of all books from database
-            command = "select * from Books";
-            SqlDataAdapter adapter = new SqlDataAdapter(command, con);
-
-            //we can't get the info from adapter, so we just pour the info in data to manipulate
-            DataTable data = new DataTable();
-            adapter.Fill(data);
-
-            //check this book already exists in the library or not
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                if (data.Rows[i][0].ToString() == Name)
-                {
-                    try
-                    {
-                        previousCount = int.Parse(data.Rows[i][2].ToString());                        
-                        bookFound = true;
-                        break;
-                    }
-                    catch
-                    {
-
-                    }         
-                }
-            }
-
-            if (!bookFound)
-            {
-                //add new book to database
-                command2 = "insert into Books values('" + Name + "' , '" + Writer + "' , '" + 1 + "' , '" + pubNum + "')";
-            }
-            else
-            {
-                //increase the number of books in the library by 1
-                command2 = "update Books SET count = '" + previousCount + 1 + "' where name = '" + Name + "' ";
-            }
-
-
-            //execution of the commands
-            SqlCommand com = new SqlCommand(command, con);
-            SqlCommand com2 = new SqlCommand(command2, con);
-
-            //execute the commands
-            com.BeginExecuteNonQuery();
-            com2.BeginExecuteNonQuery();
-
-            //close the connection to database
-            con.Close();
-        }
-
+        
         //returns a string, which consists of information of all Books *******
         public string BooksInfo()
         {
@@ -501,6 +436,12 @@ namespace WpfApp1
             con.Close();
 
             return tmp;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            AddBook ADB = new AddBook();
+            ADB.Show();
         }
     }
 }

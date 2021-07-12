@@ -25,7 +25,7 @@ namespace WpfApp1
     {
         //init "THE 5 LISTS" of all info stored in the database
         public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
-        public static ObservableCollection<employe> MyEmployees = new ObservableCollection<employe>();
+        public static ObservableCollection<employe> MyEmployees { get; set; }
         public static ObservableCollection<member> MyMembers = new ObservableCollection<member>();
         public static ObservableCollection<Book> MyBooks = new ObservableCollection<Book>();
         public static ObservableCollection<BorrowedBooks> MyBorrowedBooks = new ObservableCollection<BorrowedBooks>();
@@ -370,12 +370,13 @@ namespace WpfApp1
 
 
         int v = 0;
-        Library lib;
         public AddOrDeleteEmployee()
         {
+            MyEmployees = new ObservableCollection<employe>();
             InitializeComponent();
 
             GetInfoFromDatabase();
+
             //initilize lib
         }
 
@@ -393,6 +394,7 @@ namespace WpfApp1
             }
             
         }
+
         private void delete(object sender, RoutedEventArgs e)
         {
             if(this.v==1)
@@ -407,9 +409,32 @@ namespace WpfApp1
             }
             SaveInfoToDatabase();
         }
+
+        //takes info of an employee as input and save it to database
+        public void AddEmployeeToDatabase(string name, string pass, string email, string phNum, int money, DateTime dt)
+        {
+            //open the connection to database
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+
+            con.Open();
+            string command;
+
+            command = "insert into Employees values('" + name + "' ,'" + pass.Trim() + "' ,'" + email.Trim() + "' ,'" + phNum.Trim() + "' ,'" + money + "' ,'" + dt + "' )";
+
+            //execution of the command
+            SqlCommand com = new SqlCommand(command, con);
+
+            //execute the command
+            com.ExecuteNonQuery();
+
+            //close the connection to database
+            con.Close();
+        }
+
+
         public void AddEmpoyee(object sender, RoutedEventArgs e)
         {
-            if(validateemail()&& PhoneNuvalidate()&& validateDouble())
+            if(validateemail()&& PhoneNuvalidate())
             {
                 if(passtxt.Text==repasstxt.Text)
                 {
@@ -425,7 +450,9 @@ namespace WpfApp1
                     {
                         employe em = new employe(this.name.Text, this.passtxt.Text,  0, this.emailtxt.Text, this.phoneNutxt.Text, DateTime.Now);
                         MyEmployees.Add(em);
-                        SaveInfoToDatabase();
+                        AddEmployeeToDatabase(this.name.Text, this.passtxt.Text, this.emailtxt.Text, this.phoneNutxt.Text, 0, DateTime.Now);
+                        MessageBox.Show("You successfully added an employee bro!");
+                        this.Close();
                     }
                     else
                     {
@@ -454,6 +481,7 @@ namespace WpfApp1
                 return false;
             }
         }
+
         public bool PhoneNuvalidate()
         {
             Regex rx = new Regex("^(09)\\d{9}$", RegexOptions.IgnoreCase);
@@ -467,19 +495,6 @@ namespace WpfApp1
                 return false;
             }
         }
-        public bool validateDouble()
-        {
-            try
-            {
-                double n = double.Parse(paymanttxt.Text);
-                return true;
-            }
-            catch
-            {
-                MessageBox.Show("input a number for paymants!");
-                return false;
-            }
 
-        }
     }
 }

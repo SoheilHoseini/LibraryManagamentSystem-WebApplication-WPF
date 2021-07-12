@@ -96,3 +96,67 @@ D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\user.baml
 D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
 D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
 D:\programing\C#\project\my\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AddBook.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AddOrDeleteEmployee.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AllBooks.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\Allemployees.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\books.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\employee panel.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\employee.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\employee_personal_info.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\eshterak.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\financial_status.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manager panel.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manager.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manage_employees.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manage_members.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\members_status.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\member_sign_up.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\one_member_status.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\payment.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\pay_history.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user panel.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\App.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AddBook.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AddOrDeleteEmployee.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AllBooks.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\Allemployees.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\books.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\employee panel.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\employee.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\employee_personal_info.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\eshterak.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\financial_status.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manager panel.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manager.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manage_employees.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\manage_members.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\members_status.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\member_sign_up.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\one_member_status.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\payment.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\pay_history.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user panel.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.dll
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\MaterialDesignColors.pdb
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\App.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete

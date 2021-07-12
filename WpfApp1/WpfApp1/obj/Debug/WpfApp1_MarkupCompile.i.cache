@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\programing\C#\project\main project\WpfApp1\WpfApp1\obj\Debug\
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\
 WpfApp1
 none
 false
 DEBUG;TRACE
-D:\programing\C#\project\main project\WpfApp1\WpfApp1\App.xaml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\App.xaml
 221396965307
 
-271564123893
-13-1505183044
+27-687555842
+15-1766075437
 AddBook.xaml;AddOrDeleteEmployee.xaml;AllBooks.xaml;Allemployees.xaml;books.xaml;employee panel.xaml;employee.xaml;employee_personal_info.xaml;eshterak.xaml;financial_status.xaml;MainWindow.xaml;manager panel.xaml;manager.xaml;manage_employees.xaml;manage_members.xaml;members_status.xaml;member_sign_up.xaml;one_member_status.xaml;payment.xaml;pay_history.xaml;user panel.xaml;user.xaml;
 
 True

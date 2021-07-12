@@ -367,11 +367,10 @@ namespace WpfApp1
         }
 
 
-        Library lib;
         public manage_employees()
         {
             InitializeComponent();
-            //initilize lib
+
             GetInfoFromDatabase();
         }
 
@@ -392,13 +391,14 @@ namespace WpfApp1
         //
         private void pay(object sender, RoutedEventArgs e)
         {
-            if(passtxt.Password==lib.managar.pass)
+            if(passtxt.Password == MyManager[0].pass)
             {
                 payEmployee();
+                MessageBox.Show("You paid your employees bro!");
             }
             else
             {
-                MessageBox.Show("your password isn't correct !");
+                MessageBox.Show("Your password isn't correct !");
             }
         }
 
@@ -418,20 +418,17 @@ namespace WpfApp1
         //
         public void payEmployee()
         {
+            float monyTopay = 1000 * MyEmployees.Count;
 
-            var employeesPayment = lib.employees.Select(x => x.payment);
-            double monyTopay = 0;
-            foreach(double m in employeesPayment)
+            
+            if (monyTopay < MyManager[0].mony)
             {
-                monyTopay += m;
-            }
-            managar[] mng = MyManager.ToArray();
-            if (monyTopay<mng[0].mony)
-            {
-                foreach(employe Em in lib.employees)
+                foreach(employe Em in MyEmployees)
                 {
-                    Em.mony += Em.payment;
+                    Em.mony += 1000;
                 }
+                MyManager[0].mony -= monyTopay;
+                UpdateInfoOfDatabase();
             }
             else
             {

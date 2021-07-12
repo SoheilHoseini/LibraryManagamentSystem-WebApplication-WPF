@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Allemployees" Height="450" Width="800">
+        Title="Allemployees" Height="450" Width="800" Background="#FF7CC5AD">
     <Grid>
-        <Grid>
+        <Grid Margin="0,0,-0.4,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.5*"></RowDefinition>
                 <RowDefinition Height="3*"></RowDefinition>
@@ -19,7 +19,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <ScrollViewer Grid.Row="1" Grid.Column="1">
-                <ItemsControl  ItemsSource="{Binding employees, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged }">
+                <ItemsControl  ItemsSource="{Binding MyEmployees, Mode=TwoWay ,UpdateSourceTrigger=PropertyChanged }" Width="519">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -33,13 +33,13 @@
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding name}"></TextBlock>
                                 <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding phoneNu}"></TextBlock>
-                                <Button Content="delete" Grid.Row="0" Grid.Column="2" Width="10" Height="10" x:Name="remove_btn" MouseLeftButtonUp="remove_btn_Click"></Button>
+                                <Button Content="X" Grid.Row="0" Grid.Column="2" Width="20" Height="20" x:Name="remove_btn" MouseLeftButtonUp="remove_btn_Click"  Background="#FF5FA53A"></Button>
                             </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </ScrollViewer>
-            <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="back" Click="Button_Click"></Button>
+            <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Back" Click="Button_Click" Background="#FF5FA53A"></Button>
             
             
             

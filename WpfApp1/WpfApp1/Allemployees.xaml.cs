@@ -24,7 +24,7 @@ namespace WpfApp1
     {
         //init "THE 5 LISTS" of all info stored in the database
         public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
-        public static ObservableCollection<employe> MyEmployees = new ObservableCollection<employe>();
+        public static ObservableCollection<employe> MyEmployees { get; set; }
         public static ObservableCollection<member> MyMembers = new ObservableCollection<member>();
         public static ObservableCollection<Book> MyBooks = new ObservableCollection<Book>();
         public static ObservableCollection<BorrowedBooks> MyBorrowedBooks = new ObservableCollection<BorrowedBooks>();
@@ -366,22 +366,42 @@ namespace WpfApp1
         }
 
 
-
-
         public Allemployees()
         {
+            MyEmployees = new ObservableCollection<employe>();
             InitializeComponent();
 
             GetInfoFromDatabase();
             //initilize lib
-
+            DataContext = this;
         }
+
+        //takes info of an employee as input and save it to database
+        public void DeleteEmployee(string name)
+        {
+            //open the connection to database
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
+
+            con.Open();
+            string command;
+            
+            command = "delete from Employees where name = '" + name + "' ";
+            //execution of the command
+            SqlCommand com = new SqlCommand(command, con);
+
+            //execute the command
+            com.BeginExecuteNonQuery();
+
+            //close the connection to database
+            con.Close();
+        }
+
 
         private void remove_btn_Click(object sender, RoutedEventArgs e)
         {
             employe employeToRemove = ((Button)sender).Tag as employe;
-            MyEmployees.Remove(employeToRemove);
-            SaveInfoToDatabase();
+            DeleteEmployee(employeToRemove.name);
+            MyEmployees.Remove(employeToRemove);       
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="financial_status" Height="450" Width="800">
+        Title="financial_status" Height="450" Width="800" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"></RowDefinition>
@@ -15,11 +15,20 @@
             <RowDefinition Height="0.5*"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <Border CornerRadius="10" Grid.RowSpan="6" Margin="0,0,-0.4,0">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFFFF284" Offset="0.0"/>
+                    <GradientStop Color="#FFFFC900" Offset="1.0"/>
+                    <GradientStop Color="#FF9A820E" Offset="0.245"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
         <TextBlock Grid.Row="1" Text="Bank balance :" FontFamily="Showcard Gothic" VerticalAlignment="Center" Margin="50 0 0 0"></TextBlock>
         <TextBlock Grid.Row="1" x:Name="amunt" FontFamily="Showcard Gothic" VerticalAlignment="Center" Margin="250 0 0 0"></TextBlock>
-        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="128,10.333,517.333,23.667" Height="50" FontFamily="Showcard Gothic" Content="Increase bank balance " Click="AddToAccount"></Button>
-        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,10.333,0,23.667" Height="50" FontFamily="Showcard Gothic" Content="back" Width="98" Click="Button_Click"></Button>
+        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="106,10.6,517.6,23.4" Height="50" FontFamily="Showcard Gothic" Content="Increase bank balance " Click="AddToAccount" Width="170" Background="#FF656501"></Button>
+        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,10.333,0,23.667" Height="50" FontFamily="Showcard Gothic" Content="back" Width="98" Click="Button_Click"  Background="#FF656501"></Button>
         <TextBlock Grid.Row="2" Text="input amunt of mony :" FontFamily="Showcard Gothic" VerticalAlignment="Center" Margin="347,28.333,281.333,32.667" Height="23"/>
-        <TextBox x:Name="mony_amunt" Grid.Row="2" VerticalAlignment="Center" Margin="512,27.333,152.333,38.667"></TextBox>
+        <TextBox x:Name="mony_amunt" Grid.Row="2" VerticalAlignment="Center" Margin="512,10.6,152.6,32.4" Height="41"></TextBox>
     </Grid>
 </Window>

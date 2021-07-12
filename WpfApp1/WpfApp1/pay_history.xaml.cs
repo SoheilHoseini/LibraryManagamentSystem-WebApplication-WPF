@@ -369,14 +369,6 @@ namespace WpfApp1
 
 
 
-        Library lib;
-        public pay_history()
-        {
-            InitializeComponent();
-
-            GetInfoFromDatabase();
-            //initilize lib
-            DataContext = lib.managar.payments;
-        }
+        
     }
 }

@@ -503,21 +503,31 @@ namespace WpfApp1
 
     public class BorrowedBooks
     {
-        public string name;
-        public string writer;
-        public string memberName;
-        public int publicationNum;
+        public string name { get; set; }
+        public string writer { get; set; }
+        public string memberName { get; set; }
+        public int publicationNum { get; set; }
     }
 
-    public struct Book
+    public class Book
     {
 
         //public DateTime borrowedDay;//?
-        public string name;
-        public string writer;
-        public int count;
-        public int publicationNum;
+        public string name { get; set; }
+        public string writer { get; set; }
+        public int count { get; set; }
+        public int publicationNum { get; set; }
+        public Book(string name, string writer, int pub)
+        {
+            this.name = name;
+            this.writer = writer;
+            this.publicationNum = pub;
+        }
 
+        public Book()
+        {
+
+        }
         public int timeremaining()
         {
             //calculat time remaining
