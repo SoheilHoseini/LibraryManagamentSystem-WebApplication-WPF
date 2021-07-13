@@ -69,6 +69,9 @@
     <Compile Include="AddOrDeleteEmployee.xaml.cs">
       <DependentUpon>AddOrDeleteEmployee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddTake.xaml.cs">
+      <DependentUpon>AddTake.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AllBooks.xaml.cs">
       <DependentUpon>AllBooks.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,9 @@
     </Compile>
     <Compile Include="books.xaml.cs">
       <DependentUpon>books.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BOOKZZ.xaml.cs">
+      <DependentUpon>BOOKZZ.xaml</DependentUpon>
     </Compile>
     <Compile Include="employee panel.xaml.cs">
       <DependentUpon>employee panel.xaml</DependentUpon>
@@ -111,6 +117,9 @@
     <Compile Include="member_sign_up.xaml.cs">
       <DependentUpon>member_sign_up.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyBooks.xaml.cs">
+      <DependentUpon>MyBooks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="one_member_status.xaml.cs">
       <DependentUpon>one_member_status.xaml</DependentUpon>
     </Compile>
@@ -137,6 +146,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="AddTake.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AllBooks.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -148,6 +161,10 @@
     <Page Include="books.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BOOKZZ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="employee panel.xaml">
       <SubType>Designer</SubType>
@@ -202,6 +219,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="member_sign_up.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyBooks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

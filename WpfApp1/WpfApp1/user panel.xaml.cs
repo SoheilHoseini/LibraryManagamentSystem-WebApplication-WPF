@@ -613,7 +613,8 @@ namespace WpfApp1
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            BOOKZZ BZ = new BOOKZZ(MemUsername);
+            BZ.Show();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -635,6 +636,12 @@ namespace WpfApp1
         {
             user_personal_info up = new user_personal_info(MemUsername);
             up.Show();
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            AddTake AT = new AddTake(MemUsername);
+            AT.Show();
         }
 
         //returns the member's account balance

@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp1.AddTake"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="AddTake" Height="450" Width="800" Background="Aqua">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="4*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="133*"></ColumnDefinition>
+                <ColumnDefinition Width="378*"></ColumnDefinition>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="132*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Margin="0.333,0,131.333,59.667" Grid.RowSpan="2">
+                <ItemsControl  ItemsSource="{Binding}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition></ColumnDefinition>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding name}"></TextBlock>
+                                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding writer}"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+            </ScrollViewer>
+            <TextBlock Text="Search with name :" Width="200" Height="30" Grid.ColumnSpan="2" Margin="28,27,283,63"></TextBlock>
+            <Button Content="Back" HorizontalAlignment="Left" Margin="28,23.333,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Background="#FF368FE2" Click="Button_Click_1"/>
+            <Button Content="All Books" Height="Auto" Margin="17,10,20.667,184.667" x:Name="All" Click="All_Click"  Grid.Row="1" Background="#FF368FE2"/>
+            <TextBox x:Name="withname" Width="200" Height="30" Grid.Column="1" Margin="59.333,10,119,80"></TextBox>
+            <TextBlock Text="Search with writer :" Width="200" Height="30" Grid.ColumnSpan="2" Margin="28,77,283,13"/>
+            <TextBox x:Name="withwriter" Width="200" Height="30" Grid.Column="1" Margin="0,60,119,30" HorizontalAlignment="Right"/>
+            <TextBlock x:Name="info1" Height="30" Margin="293.333,10,86.333,80" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <TextBlock x:Name="info2" Height="30" Margin="293.333,60,86.333,30" Grid.Column="1" Grid.ColumnSpan="3"/>
+            <Button Content="?" Height="Auto" Grid.Column="1" Margin="10.333,16,324,74" Name="search1" Click="search1_Click" Background="#FF368FE2"/>
+            <Button Content="?" Height="Auto" Grid.Column="1" Margin="10.333,68,324,22" Name="search2" Click="search2_Click" Background="#FF368FE2"/>
+            <Button Content="Take" Grid.Column="3" HorizontalAlignment="Left" Margin="46.667,10.333,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Grid.Row="2"/>
+            <TextBlock Text="Enter name of book you want to take :" Height="30" Margin="10.333,19.333,141,10.667" Grid.Column="1" Grid.Row="2"/>
+            <TextBox x:Name="takeName" Width="200" Height="30" Grid.Column="1" Margin="280.667,12.333,47.333,17.667" Grid.ColumnSpan="2" Grid.Row="2"/>
+        </Grid>
+        <Button Content="?" Height="Auto" Margin="352,374,398.333,15.667" x:Name="search1_Copy" Click="search3_Click" Background="#FF368FE2"/>
+    </Grid>
+</Window>

@@ -162,3 +162,9 @@ C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\D
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user_wallet.g.cs
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user_personal_info.baml
 C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\user_wallet.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AddTake.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\AddTake.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\MyBooks.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\MyBooks.baml
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\BOOKZZ.g.cs
+C:\Users\sahand\Desktop\University\AP\WPF Project\ZZZZZZZZ\WpfApp1\WpfApp1\obj\Debug\BOOKZZ.baml

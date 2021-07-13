@@ -437,6 +437,7 @@ namespace WpfApp1
 
         public member(string name, string pass, float mony, float monthlypayment, string email, string phoneNu, DateTime dateofsignup, DateTime Renewmembershipdate, int BorrowedbookNU)
         {
+            Borrowed = new ObservableCollection<Book>();
             this.name = name;
             this.pass = pass;
             this.mony = mony;

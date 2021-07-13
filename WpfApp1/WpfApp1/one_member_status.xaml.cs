@@ -369,7 +369,7 @@ namespace WpfApp1
 
 
         string nam;
-        Library Elib;
+
         public one_member_status()
         {
             InitializeComponent();
