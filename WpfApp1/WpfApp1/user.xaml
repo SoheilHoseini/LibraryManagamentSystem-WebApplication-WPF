@@ -31,11 +31,11 @@
             </StackPanel>
             <StackPanel Grid.Row="1" VerticalAlignment="Center" >
                 <TextBlock HorizontalAlignment="Left" Text="Password  :" Margin="20 0 0 0" Width="79" FontWeight="DemiBold"/>
-                <PasswordBox Margin="20,20,19.333,20" Name="pass"></PasswordBox>
+                <TextBox Margin="20,20,19.333,20" Name="pass"/>
             </StackPanel>
             <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Login" Click="sign_in" Height="48" Margin="160,16,126.6,0" Width="107" Background="#FFFF9562"></Button>
             <Button Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Back"  Margin="10,15.8,0,22.4" Click="back" Height="25" Background="#FFFF9562"></Button>
-            <Button Content="Sign Up" HorizontalAlignment="Left" Margin="160,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="93" Click="Button_Click" Height="48" Background="#FFFF9562"/>
+            <Button Content="Sign Up" HorizontalAlignment="Left" Margin="160,15,0,0" Grid.Row="3" VerticalAlignment="Top" Width="107" Click="Button_Click" Height="48" Background="#FFFF9562"/>
         </Grid>
 
     </Grid>

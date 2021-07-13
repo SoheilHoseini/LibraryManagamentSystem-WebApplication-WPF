@@ -22,7 +22,7 @@
             </Border.Background>
             <Grid>
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock FontSize="15" Text="To pay"  HorizontalAlignment="Center"/>
+                    <TextBlock FontSize="25" Text="To pay"  HorizontalAlignment="Center"/>
                     <TextBlock FontSize="80" Name="amunt" />
                 </StackPanel>
                 <Button VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
@@ -55,10 +55,10 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <TextBox Grid.Column="0" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
-                        <TextBox Grid.Column="1" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
-                        <TextBox Grid.Column="2" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
-                        <TextBox Grid.Column="3" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                        <TextBox  x:Name="first" Grid.Column="0" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                        <TextBox  x:Name="second" Grid.Column="1" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                        <TextBox  x:Name="third" Grid.Column="2" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
+                        <TextBox  x:Name="fourth" Grid.Column="3" Text="0000" HorizontalAlignment="Center" Foreground="LightGray" FontFamily="Global Monospace"/>
                     </Grid>
                     <Grid VerticalAlignment="Bottom">
                         <Grid.ColumnDefinitions >
@@ -67,12 +67,12 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Margin="20" Grid.Column="0">
                             <TextBlock Text="CVV2" FontSize="7" Foreground="LightGray"/>
-                            <TextBox  FontSize="12" Foreground="LightGray" FontFamily="OCR A Extended" />
+                            <TextBox  x:Name="cvv" FontSize="12" Foreground="LightGray" FontFamily="OCR A Extended" />
                         </StackPanel>
                         <StackPanel Margin="20" Grid.Column="1">
                             <TextBlock Text="EXPIRES" FontSize="7" Foreground="LightGray"/>
-                            <TextBox Text="YY/MM" FontSize="12" Foreground="LightGray" FontFamily="OCR A Extended" Width="45" HorizontalAlignment="Left"/>
-
+                            <TextBox  x:Name="expire" Text="YY/MM" FontSize="12" Foreground="LightGray" FontFamily="OCR A Extended" Width="45" HorizontalAlignment="Left"/>
+                            
                         </StackPanel>
                     </Grid>
                 </Grid>

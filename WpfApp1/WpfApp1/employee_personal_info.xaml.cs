@@ -394,6 +394,7 @@ namespace WpfApp1
 
             
         }
+
         public bool validateemail()
         {
             string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
@@ -420,7 +421,9 @@ namespace WpfApp1
                 UpdateInfoOfDatabase();
             }
         }
+        
 
+        //back
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

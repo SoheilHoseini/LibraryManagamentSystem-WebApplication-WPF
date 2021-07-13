@@ -379,65 +379,42 @@ namespace WpfApp1
 
         private void sign_in(object sender, RoutedEventArgs e)
         {
-            string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
-            Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
-            if(reemail.IsMatch(usname.Text))
+            if (CheckInfo(usname.Text, pass.Text))
             {
-                if (CheckInfo(usname.Text, pass.ToString()))
-                {
-                    user_panel usp = new user_panel(usname.Text, pass.ToString());
-                    this.Close();
-                    usp.Show();
+                user_panel usp = new user_panel(usname.Text, pass.Text);
+                this.Close();
+                usp.Show();
 
-                }
-                else
-                {
-                    MessageBox.Show("wrong info()");
-                }
             }
             else
             {
-                MessageBox.Show("please input an email adress");
+                MessageBox.Show("Invalid Input!");
             }
+            //string strRegex = @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z";
+            //Regex reemail = new Regex(strRegex, RegexOptions.IgnoreCase);
+            //if(reemail.IsMatch(usname.Text))
+            //{
+                
+            //}
+            //else
+            //{
+            //    MessageBox.Show("please input an email adress");
+            //}
         }
 
         //check the intered info with data base
         public bool CheckInfo(string usname, string pass)
         {
-            //open the connection to database
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sahand\Desktop\University\AP\WPF Project\LibraryDataBaseCenter.mdf;Integrated Security=True;Connect Timeout=30");
-
-            con.Open();
-            string command;
-            bool userFound = false;
-
-            //take all info of the maneger from database
-            command = "select * from Members";
-            SqlDataAdapter adapter = new SqlDataAdapter(command, con);
-            DataTable data = new DataTable();
-            adapter.Fill(data);//we can't get the info from adapter, so we just pour the info in data to manipulate
-
-            //check if there is a user with this info
-            for (int i = 0; i < data.Rows.Count; i++)
+            foreach (var x in MyMembers)
             {
-                if (data.Rows[i][0].ToString() == usname && data.Rows[i][1].ToString() == pass)
+                if (x.name == usname && x.pass == pass)
                 {
-                    userFound = true;
-                    break;
+                    return true;
                 }
+                //MessageBox.Show(x.name + x.pass);
             }
 
-            //execution of the command
-            SqlCommand com = new SqlCommand(command, con);
-            com.BeginExecuteNonQuery(); //execute the command
-            //close the connection to database
-            con.Close();
-
-            if (userFound)
-                return true;
-
-            else
-                return false;
+            return false;
         }
 
         private void back(object sender, RoutedEventArgs e)

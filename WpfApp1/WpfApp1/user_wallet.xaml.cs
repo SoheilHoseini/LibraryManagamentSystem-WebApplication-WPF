@@ -11,17 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Collections.ObjectModel;
 using System.Data;
-using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Collections.ObjectModel;
+using System.Text.RegularExpressions;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for payment.xaml
+    /// Interaction logic for user_wallet.xaml
     /// </summary>
-    public partial class payment : Window
+    public partial class user_wallet : Window
     {
         //init "THE 5 LISTS" of all info stored in the database
         public static ObservableCollection<managar> MyManager = new ObservableCollection<managar>();
@@ -366,124 +366,43 @@ namespace WpfApp1
             }
         }
 
+        string name;
 
-
-
-        public payment(double mony)
+        public user_wallet(string name)
         {
             InitializeComponent();
-
             GetInfoFromDatabase();
-            this.amunt.Text = "$"+mony.ToString();
+            this.name = name;
+            this.balance.Text = MyMembers.Where(x => x.name == name).ToArray()[0].mony.ToString();
         }
 
-        //by cancelling the payment process, it will go back to the admin panel
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void pay_Click(object sender, RoutedEventArgs e)
         {
-            //return to back menu
-            this.Close();
-        }
-
-        //when the admin hits "Pay Now" the proccess will end
-        private void Pay_Click(object sender, RoutedEventArgs e)
-        {
-            if(IsValidCartNumber() && IsValidCVV() && IsValidYearAndMonth())
-            {
-                MessageBox.Show("Payment Completed baby!");
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Invald Input!");
-            }
-        }
-
-        //shomare kart
-        public bool IsValidCartNumber()
-        {
-            string cardNum = string.Empty;
-            cardNum += this.first.Text + this.second.Text + this.third.Text + this.fourth.Text;
-
-            //checking if number contains any char => return false
-            long a;
             try
             {
-                a = long.Parse(cardNum);
+                payment p = new payment(double.Parse(this.increas_amunt.Text));
+                p.Show();
+                foreach(var x in MyMembers)
+                {
+                    if(x.name == name)
+                    {
+                        x.mony += float.Parse(this.increas_amunt.Text);
+                    }
+                }
+                
+                UpdateInfoOfDatabase();
             }
             catch
             {
-                return false;
+                MessageBox.Show("invalid input !");
             }
-
-
-            if (cardNum.Length != 16) return false;
-            int[] num1 = new int[16];
-            int[] num2 = new int[8];
-            for (int i = 0; i < 16; i++)
-            {
-                num1[i] = cardNum[i] - '0';
-            }
-            int j = 0;//counter for num2
-            for (int i = 0; i < 16; i += 2, j++)
-            {
-                if (2 * num1[i] >= 10) num2[j] = 1 + 2 * num1[i] % 10;
-                else num2[j] = 2 * num1[i];
-            }
-            int sum = 0;
-            for (int i = 1; i < 16; i += 2)
-            {
-                sum += num1[i];
-            }
-            foreach (int i in num2)
-            {
-                sum += i;
-            }
-            if (sum % 10 == 0) return true;
-            else return false;
         }
 
-        //CVV2
-        public bool IsValidCVV()
-        {
-            string cvv = this.cvv.Text;
-
-            Regex regex = new Regex("^[0-9]{3,4}$", RegexOptions.IgnoreCase);
-            return regex.IsMatch(cvv);
-        }
-
-        //Year and Month ( hardo bayad vared she dar voroodi tabe)
-        public bool IsValidYearAndMonth()
-        {
-            string[] info = this.expire.Text.Split('/');
-            string year = info[0];
-            string month = info[1];
-
-            Regex regexMonth = new Regex("^[0-9]{2}$", RegexOptions.IgnoreCase);
-            Regex regexYear = new Regex("^[0-9]{4}$", RegexOptions.IgnoreCase);
-
-            
-
-            DateTime thisDate = DateTime.Now;
-            
-
-            if (regexYear.IsMatch(year) && regexMonth.IsMatch(month))
-            {
-                DateTime expire = new DateTime(int.Parse(year), int.Parse(month), 1);
-                int tmp = DateTime.Compare(expire,thisDate);
-                if (tmp < 0)
-                    return false;
-                else
-                    return true;
-            }
-            else 
-                return false;
-        }
-
-
-        //closes the payment page
-        private void ClosePaymentPage_Click(object sender, RoutedEventArgs e)
+        private void pay_Copy_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
     }
+
+
 }

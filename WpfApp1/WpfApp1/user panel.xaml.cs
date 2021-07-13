@@ -367,9 +367,6 @@ namespace WpfApp1
 
 
 
-
-        Library Mlib;
-        member member1;
         string MemUsername, MemPassword;
 
         public user_panel(string userName , string Password)
@@ -623,7 +620,21 @@ namespace WpfApp1
         {
             member[] members = MyMembers.Where(x => x.pass == MemPassword).ToArray();
             eshterak es = new eshterak(members[0].name);
+            es.Show();
+        }
 
+        //wallet
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            user_wallet wallet = new user_wallet(MemUsername);
+            wallet.Show();
+        }
+
+        //personal info
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            user_personal_info up = new user_personal_info(MemUsername);
+            up.Show();
         }
 
         //returns the member's account balance
